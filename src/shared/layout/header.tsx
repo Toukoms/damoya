@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FiShoppingCart } from "react-icons/fi";
 import { SearchInput } from "../ui";
 
@@ -24,10 +25,10 @@ export function Header() {
       </div>
 
       <nav className="bg-primary px-8 py-4 flex gap-8 rounded-md">
-        <a href="">Accueil</a>
-        <a href="">Menus</a>
-        <a href="">A propos</a>
-        <a href="">Contact</a>
+        <Link href="/">Accueil</Link>
+        <Link href="/dishes">Menus</Link>
+        <Link href="/about">A propos</Link>
+        <Link href="/contact">Contact</Link>
       </nav>
     </header>
   );
