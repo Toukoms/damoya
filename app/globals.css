@@ -3,8 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary: #bfa141;
-  --secondary: #322e29;
+  --primary: #C9A24D;
+  --secondary: #2E4A3F;
+  --warm-white: #FAF8F5;
+  --light-neutral: #F3F1ED;
+  --text-dark: #1F1F1F;
+  --text-body: #4A4A4A;
 }
 
 @theme inline {
@@ -12,18 +16,24 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-warm-white: var(--warm-white);
+  --color-light-neutral: var(--light-neutral);
+  --color-text-dark: var(--text-dark);
+  --color-text-body: var(--text-body);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: var(--font-sans);
 }
 
-@utility flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@utility container-custom {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+@utility section-padding {
+  @apply py-16 md:py-24;
 }
