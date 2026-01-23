@@ -38,7 +38,7 @@ export function HowItWorks() {
   ];
 
   return (
-    <section className="bg-white section-padding">
+    <section id="how-it-works" className="bg-white section-padding">
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-text-dark">

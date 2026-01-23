@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function About() {
   return (
-    <section className="bg-warm-white section-padding">
+    <section id="about" className="bg-warm-white section-padding">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image Column */}
