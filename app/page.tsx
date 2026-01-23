@@ -1,7 +1,19 @@
-export default function Home() {
+import {
+  About,
+  ExploreMore,
+  Hero,
+  HowItWorks,
+  Testimonials,
+} from "@/src/shared/layout";
+
+export default function HomePage() {
   return (
-    <div>
-      <h1>Bienvenu chez Damoya</h1>
+    <div className="space-y-20">
+      <Hero />
+      <About />
+      <HowItWorks />
+      <Testimonials />
+      <ExploreMore />
     </div>
   );
 }

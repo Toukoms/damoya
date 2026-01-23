@@ -1,4 +1,4 @@
-import { Header } from "@shared/layout";
+import { Footer, Header } from "@shared/layout";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -31,6 +31,7 @@ export default function RootLayout({
         <main className="p-4">
           <Header />
           {children}
+          <Footer />
         </main>
       </body>
     </html>
