@@ -3,7 +3,10 @@ import Link from "next/link";
 
 export function Hero() {
   return (
-    <section id="hero" className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+    <section
+      id="hero"
+      className="relative h-screen min-h-150 flex items-center justify-center overflow-hidden"
+    >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -14,21 +17,25 @@ export function Hero() {
           priority
         />
         <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute bottom-0 left-0 right-0 h-50 bg-linear-to-t from-white/20 to-transparent" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 container-custom text-center text-white">
         <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-          L’Excellence de la Gastronomie <br className="hidden md:block" />
+          L&apos;Excellence de la Gastronomie <br className="hidden md:block" />
           Cacher pour Vos Événements
         </h1>
-        
+
         <p className="font-sans text-lg md:text-xl font-bold tracking-wide uppercase mb-4 opacity-90">
-          Cuisine raffinée. Certification cacher stricte. Expériences inoubliables.
+          Cuisine raffinée. Certification cacher stricte. Expériences
+          inoubliables.
         </p>
 
         <p className="font-sans text-base md:text-lg max-w-2xl mx-auto mb-10 opacity-90 leading-relaxed">
-          Damoya Traiteur conçoit des expériences culinaires cacher haut de gamme pour vos événements privés et professionnels, sous le contrôle du Beth Din de Paris – Glatt Halak Beth Yossef.
+          Damoya Traiteur conçoit des expériences culinaires cacher haut de
+          gamme pour vos événements privés et professionnels, sous le contrôle
+          du Beth Din de Paris – Glatt Halak Beth Yossef.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

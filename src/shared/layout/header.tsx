@@ -9,7 +9,10 @@ import { NavLink } from "../ui/nav-link";
 export function Header({ className, ...props }: ComponentProps<"header">) {
   return (
     <header
-      className={cn("mb-4 flex justify-between items-center", className)}
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 flex justify-between items-center transition-all duration-300 pt-2 bg-background/95 backdrop-blur-sm shadow-sm",
+        className,
+      )}
       {...props}
     >
       <div className="flex gap-8 items-center mb-2">
