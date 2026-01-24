@@ -46,7 +46,7 @@ export function ExploreMore() {
           {categories.map((category) => (
             <div
               key={category.id}
-              className="group relative h-[350px] rounded-lg overflow-hidden shadow-md"
+              className="group relative h-87.5 rounded-lg overflow-hidden shadow-md"
             >
               <Image
                 src={category.image}
@@ -56,7 +56,7 @@ export function ExploreMore() {
               />
 
               {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/70 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
 
               <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-0 transition-transform duration-300">
                 <h3 className="font-sans font-semibold text-xl md:text-2xl mb-2">

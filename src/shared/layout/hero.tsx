@@ -1,5 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import { cn } from "../lib";
+import { buttonVariants } from "../ui";
 
 export function Hero() {
   return (
@@ -10,14 +12,14 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=1920&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1594046243098-0fceea9d451e?q=80&w=1170&auto=format&fit=crop"
           alt="Plat gastronomique cacher raffiné"
           fill
-          className="object-cover"
+          className="object-cover blur-[2px]"
           priority
         />
         <div className="absolute inset-0 bg-black/35" />
-        <div className="absolute bottom-0 left-0 right-0 h-50 bg-linear-to-t from-white/20 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-50 bg-linear-to-t from-background to-transparent" />
       </div>
 
       {/* Content */}
@@ -41,15 +43,18 @@ export function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/contact"
-            className="bg-primary hover:bg-[#b89345] text-white px-8 py-4 rounded font-sans font-semibold transition-colors duration-300"
+            className={buttonVariants({ variant: "primary", size: "lg" })}
           >
             Demander un devis
           </Link>
           <Link
-            href="#explore"
-            className="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white px-8 py-4 rounded font-sans font-semibold transition-colors duration-300"
+            href="/dishes"
+            className={cn(
+              buttonVariants({ variant: "outline", size: "lg" }),
+              "text-background border-background hover:border-transparent",
+            )}
           >
-            Découvrir nos prestations
+            Découvrir nos Plats
           </Link>
         </div>
       </div>

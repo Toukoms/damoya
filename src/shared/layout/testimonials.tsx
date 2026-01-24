@@ -33,7 +33,7 @@ export function Testimonials() {
               key={testimonial.id}
               className="bg-white p-8 md:p-10 rounded-lg shadow-sm relative"
             >
-              <BiSolidQuoteAltLeft className="text-primary/20 text-6xl absolute top-6 left-6 -z-0" />
+              <BiSolidQuoteAltLeft className="text-primary/20 text-6xl absolute top-6 left-6 z-0" />
 
               <div className="relative z-10">
                 <blockquote className="font-serif italic text-xl md:text-2xl text-text-dark mb-6 leading-relaxed">
