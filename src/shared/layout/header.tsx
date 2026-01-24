@@ -1,5 +1,12 @@
 "use client";
 
+import {
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 import Link from "next/link";
 import { ComponentProps, useEffect, useState } from "react";
 import { FiShoppingCart } from "react-icons/fi";
@@ -49,28 +56,35 @@ function MobileHeader({ isScrolled, className, ...props }: HeaderProps) {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <header
-      className={cn(
-        "fixed top-0 z-50 flex justify-between items-center w-full px-4 transition-all duration-300",
-        isScrolled
-          ? "bg-background/80 backdrop-blur-md py-2"
-          : "bg-transparent py-4",
-        className,
-      )}
-      {...props}
-    >
-      <div className="flex items-center gap-4">
-        <Button
-          variant="ghost"
-          size="icon"
-          onClick={toggleMenu}
-          className="bg-background"
-        >
-          <LuMenu className="w-6 h-6" />
-        </Button>
-        <Logo className="w-24" />
-      </div>
-      <CartButton />
+    <>
+      <header
+        className={cn(
+          "fixed top-0 py-2 z-40 flex justify-between items-center w-full px-4 transition-all duration-300",
+          isScrolled ? "bg-background/80 backdrop-blur-md " : "bg-transparent",
+          className,
+        )}
+        {...props}
+      >
+        <div className="flex items-center gap-4">
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={toggleMenu}
+            className="bg-background"
+          >
+            <LuMenu className="w-6 h-6" />
+          </Button>
+          <Logo
+            className={cn("w-24", !isScrolled && "hue-rotate-180 invert")}
+          />
+        </div>
+        <div className="flex items-center gap-2">
+          <CartButton />
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+        </div>
+      </header>
 
       {/* Mobile Drawer */}
       {isMenuOpen && (
@@ -105,11 +119,21 @@ function MobileHeader({ isScrolled, className, ...props }: HeaderProps) {
               <NavLink href="/contact" onClick={toggleMenu}>
                 Contact
               </NavLink>
+              <SignedOut>
+                <div className="flex flex-col gap-2 mt-4">
+                  <SignInButton>
+                    <Button variant="primary">Se connecter</Button>
+                  </SignInButton>
+                  <SignUpButton>
+                    <Button variant="primary">S&apos;inscrire</Button>
+                  </SignUpButton>
+                </div>
+              </SignedOut>
             </nav>
           </div>
         </div>
       )}
-    </header>
+    </>
   );
 }
 
@@ -117,27 +141,44 @@ function DesktopHeader({ isScrolled, className, ...props }: HeaderProps) {
   return (
     <header
       className={cn(
-        "fixed top-0 z-50 flex justify-between items-center w-full px-4 md:px-8 transition-all duration-300",
-        isScrolled
-          ? "bg-background/80 backdrop-blur-md py-2"
-          : "bg-transparent py-6",
+        "fixed top-0 py-2 z-50 flex justify-between items-center w-full px-4 md:px-8 transition-all duration-300",
+        isScrolled ? "bg-background/80 backdrop-blur-md " : "bg-transparent",
         className,
       )}
       {...props}
     >
       <div className="flex gap-8 items-center">
-        <Logo className="w-30 md:w-36 lg:w-42" />
+        <Logo
+          className={cn(
+            "w-30 md:w-36 lg:w-42",
+            !isScrolled && "hue-rotate-180 invert",
+          )}
+        />
 
-        <nav className="flex gap-2 items-center">
-          <NavLink href="/">Accueil</NavLink>
-          <NavLink href="/dishes">Menus</NavLink>
-          <NavLink href="/contact">Contact</NavLink>
+        <nav className="flex gap-3 md:gap-6 items-center">
+          <NavLink href="/" isScrolled={isScrolled}>
+            Accueil
+          </NavLink>
+          <NavLink href="/dishes" isScrolled={isScrolled}>
+            Menus
+          </NavLink>
+          <NavLink href="/contact" isScrolled={isScrolled}>
+            Contact
+          </NavLink>
         </nav>
       </div>
 
       <div className="flex items-center gap-3">
         <SearchInput />
         <CartButton />
+        <SignedOut>
+          <SignInButton>
+            <Button variant="primary">Se connecter</Button>
+          </SignInButton>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
       </div>
     </header>
   );

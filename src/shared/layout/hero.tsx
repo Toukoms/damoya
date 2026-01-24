@@ -24,7 +24,7 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 container-custom text-center text-white">
-        <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+        <h1 className="font-sans text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
           L&apos;Excellence de la Gastronomie <br className="hidden md:block" />
           Cacher pour Vos Événements
         </h1>
