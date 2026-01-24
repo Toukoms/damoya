@@ -1,16 +1,36 @@
+import { ComponentProps } from "react";
 import { FiSearch } from "react-icons/fi";
+import { cn } from "../lib";
+import { Button } from "./button";
 
-export function SearchInput() {
+type Props = {
+  containerClassName?: string;
+} & ComponentProps<"input">;
+
+export function SearchInput({
+  className,
+  containerClassName,
+  ...inputProps
+}: Props) {
   return (
-    <div className="flex items-center gap-2 rounded-md border border-secondary/60 shadow-sm transition-all duration-200 hover:border-primary/60 focus-within:border-primary focus-within:shadow-md overflow-hidden">
+    <div
+      className={cn(
+        "flex items-center gap-2 bg-background rounded-md border border-secondary/60 shadow-sm transition-all duration-200 hover:border-primary/60 focus-within:border-primary focus-within:shadow-md overflow-hidden",
+        containerClassName,
+      )}
+    >
       <input
         type="search"
         placeholder="Recherche"
-        className="w-full px-4 py-2 bg-transparent outline-none placeholder-secondary"
+        className={cn(
+          "w-full px-4 py-2 bg-transparent outline-none placeholder-secondary",
+          className,
+        )}
+        {...inputProps}
       />
-      <button className="text-background cursor-pointer bg-primary px-4 py-2 h-full transition-colors duration-200 flex items-center justify-center">
+      <Button className="rounded-none px-4" variant="primary">
         <FiSearch />
-      </button>
+      </Button>
     </div>
   );
 }

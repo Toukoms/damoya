@@ -1,9 +1,10 @@
+import { MainWrapper } from "@/src/shared/layout";
 import Link from "next/link";
 import { LuMail, LuMapPin, LuPhone } from "react-icons/lu";
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-warm-white mt-24">
+    <MainWrapper>
       {/* Header Section */}
       <section className="bg-secondary py-20 text-white text-center">
         <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
@@ -97,6 +98,6 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-    </div>
+    </MainWrapper>
   );
 }

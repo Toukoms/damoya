@@ -1,7 +1,9 @@
-import { Order } from "@/src/core/entities/order";
-
-const orders: Order[] = [];
+import { MainWrapper } from "@/src/shared/layout";
 
 export default function OrderPage() {
-  return <div>OrderPage</div>;
+  return (
+    <MainWrapper>
+      <div className="mt-26 scroll-mt-26">OrderPage</div>
+    </MainWrapper>
+  );
 }

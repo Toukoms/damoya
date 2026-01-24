@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ComponentProps } from "react";
 import { LuMail, LuMapPin, LuPhone } from "react-icons/lu";
 import { cn } from "../lib/tailwind";
+import { Logo } from "../ui";
 
 export function Footer({ className, ...props }: ComponentProps<"footer">) {
   return (
@@ -14,9 +15,7 @@ export function Footer({ className, ...props }: ComponentProps<"footer">) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 border-b border-white/10 pb-16">
           {/* Column 1: Brand Info */}
           <div>
-            <h3 className="font-serif text-2xl font-bold mb-6">
-              Damoya Traiteur
-            </h3>
+            <Logo className="w-48 mb-6" />
             <p className="font-sans text-white/80 mb-6 leading-relaxed">
               Gastronomie cacher haut de gamme pour vos événements privés et
               professionnels.

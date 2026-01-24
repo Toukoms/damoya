@@ -1,12 +1,9 @@
-import { Dish } from "@/src/core/entities/dish";
-
-//TODO: Create mock dishes data
-const dishes: Dish[] = [];
+import { MainWrapper } from "@/src/shared/layout";
 
 export default function DishesPage() {
   return (
-    <main>
+    <MainWrapper>
       <h1>Nos Plats & Formules</h1>
-    </main>
+    </MainWrapper>
   );
 }
