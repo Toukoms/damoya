@@ -4,4 +4,6 @@ export type Dish = {
   price: number;
   img: string;
   categories: string[];
+  createdAt: Date;
+  updatedAt: Date;
 };

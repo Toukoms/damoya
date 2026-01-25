@@ -5,6 +5,15 @@ type Props = Dish & ComponentProps<"div">;
 
 export const DishCard = (props: Props) => {
   //TODO: Implement DishCard UI
-  const { name, description, price, img, categories, ...rest } = props;
+  const {
+    name,
+    description,
+    price,
+    img,
+    categories,
+    createdAt,
+    updatedAt,
+    ...rest
+  } = props;
   return <div {...rest}>{name}</div>;
 };

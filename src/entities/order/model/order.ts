@@ -1,6 +1,7 @@
 export type Order = {
   id: string;
   dishId: string;
-  totalAmount: number;
+  quantity: number;
   createdAt: Date;
+  updatedAt: Date;
 };
