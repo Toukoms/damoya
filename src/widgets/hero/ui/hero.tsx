@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { cn } from "../lib";
-import { buttonVariants } from "../ui";
+import { cn } from "@shared/lib/tailwind";
+import { buttonVariants } from "@shared/ui";
 
 export function Hero() {
   return (

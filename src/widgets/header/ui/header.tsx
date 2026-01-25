@@ -11,13 +11,13 @@ import Link from "next/link";
 import { ComponentProps, useEffect, useState } from "react";
 import { FiShoppingCart } from "react-icons/fi";
 import { LuMenu, LuX } from "react-icons/lu";
-import { cn } from "../lib/tailwind";
-import { useMobile } from "../lib/useMobile";
-import { Button, Logo, SearchInput } from "../ui";
-import { NavLink } from "../ui/nav-link";
+import { cn } from "@shared/lib/tailwind";
+import { useMobile } from "@shared/lib/useMobile";
+import { Button, Logo, SearchInput } from "@shared/ui";
+import { NavLink } from "@shared/ui/nav-link";
 
 interface HeaderProps extends ComponentProps<"header"> {
-  isScrolled: boolean;
+  isScrolled?: boolean;
 }
 
 export function Header(props: ComponentProps<"header">) {

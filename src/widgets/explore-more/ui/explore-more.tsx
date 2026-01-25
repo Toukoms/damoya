@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { cn } from "@shared/lib/tailwind";
 
 export function ExploreMore() {
   const categories = [

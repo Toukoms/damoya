@@ -1,8 +1,9 @@
-import { Footer, Header } from "@shared/layout";
-import type { Metadata } from "next";
+import "@app/styles/globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import { Footer } from "@widgets/footer";
+import { Header } from "@widgets/header";
+import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
-import "./globals.css";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",

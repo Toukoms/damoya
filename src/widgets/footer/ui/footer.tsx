@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { ComponentProps } from "react";
 import { LuMail, LuMapPin, LuPhone } from "react-icons/lu";
-import { cn } from "../lib/tailwind";
-import { Logo } from "../ui";
+import { cn } from "@shared/lib/tailwind";
+import { Logo } from "@shared/ui";
 
 export function Footer({ className, ...props }: ComponentProps<"footer">) {
   return (
