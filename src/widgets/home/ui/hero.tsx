@@ -1,13 +1,13 @@
-import Image from "next/image";
-import Link from "next/link";
 import { cn } from "@shared/lib/tailwind";
 import { buttonVariants } from "@shared/ui";
+import Image from "next/image";
+import Link from "next/link";
 
 export function Hero() {
   return (
     <section
       id="hero"
-      className="relative h-screen min-h-150 flex items-center justify-center overflow-hidden"
+      className="relative h-dvh min-h-180 flex md:items-center justify-center overflow-hidden"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
@@ -23,18 +23,18 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container-custom text-center text-white">
-        <h1 className="font-sans text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+      <div className="relative z-10 container-custom text-center text-white pt-32 md:pt-0">
+        <h1 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
           L&apos;Excellence de la Gastronomie <br className="hidden md:block" />
           Cacher pour Vos Événements
         </h1>
 
-        <p className="font-sans text-lg md:text-xl font-bold tracking-wide uppercase mb-4 opacity-90">
+        <p className="font-sans text-base sm:text-lg md:text-xl font-bold tracking-wide uppercase mb-4 opacity-90">
           Cuisine raffinée. Certification cacher stricte. Expériences
           inoubliables.
         </p>
 
-        <p className="font-sans text-base md:text-lg max-w-2xl mx-auto mb-10 opacity-90 leading-relaxed">
+        <p className="font-sans text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-10 opacity-90 leading-relaxed">
           Damoya Traiteur conçoit des expériences culinaires cacher haut de
           gamme pour vos événements privés et professionnels, sous le contrôle
           du Beth Din de Paris – Glatt Halak Beth Yossef.

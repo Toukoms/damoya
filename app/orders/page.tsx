@@ -1,1 +1,9 @@
-export { OrderPage as default } from "@pages/orders";
+import { MainWrapper } from "@shared/ui";
+
+export default function OrderPage() {
+  return (
+    <MainWrapper>
+      <div className="mt-26 scroll-mt-26">OrderPage</div>
+    </MainWrapper>
+  );
+}
