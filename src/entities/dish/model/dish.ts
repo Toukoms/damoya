@@ -1,9 +1,12 @@
+import { Category } from "./categories";
+
 export type Dish = {
-  name: string;
+  title: string;
   description: string;
   price: number;
-  img: string;
-  categories: string[];
+  standardQuantity?: string;
+  imgUrl: string;
+  categories: Category[];
   createdAt: Date;
   updatedAt: Date;
 };
