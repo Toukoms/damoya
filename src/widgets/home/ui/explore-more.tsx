@@ -1,35 +1,8 @@
+import { PRESTATIONS } from "@shared/config/prestations";
 import Image from "next/image";
 import Link from "next/link";
-import { cn } from "@shared/lib/tailwind";
 
 export function ExploreMore() {
-  const categories = [
-    {
-      id: 1,
-      title: "Mariages & Réceptions",
-      image:
-        "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=687&auto=format&fit=crop",
-    },
-    {
-      id: 2,
-      title: "Bar & Bat Mitsva",
-      image:
-        "https://plus.unsplash.com/premium_photo-1677000666461-fbefa43c2c7f?q=80&w=687&auto=format&fit=crop",
-    },
-    {
-      id: 3,
-      title: "Shabbat & Fêtes",
-      image:
-        "https://images.unsplash.com/photo-1490818387583-1baba5e638af?q=80&w=800&auto=format&fit=crop",
-    },
-    {
-      id: 4,
-      title: "Événements Professionnels",
-      image:
-        "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800&auto=format&fit=crop",
-    },
-  ];
-
   return (
     <section id="explore" className="bg-white section-padding">
       <div className="container-custom">
@@ -43,8 +16,8 @@ export function ExploreMore() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {categories.map((category) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          {PRESTATIONS.map((category) => (
             <div
               key={category.id}
               className="group relative h-87.5 rounded-lg overflow-hidden shadow-md"

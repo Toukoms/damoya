@@ -7,22 +7,61 @@ import {
   SignedOut,
   UserButton,
 } from "@clerk/nextjs";
-import Link from "next/link";
-import { ComponentProps, useEffect, useState } from "react";
-import { FiShoppingCart } from "react-icons/fi";
-import { LuMenu, LuX } from "react-icons/lu";
 import { cn } from "@shared/lib/tailwind";
 import { useMobile } from "@shared/lib/useMobile";
 import { Button, Logo, SearchInput } from "@shared/ui";
 import { NavLink } from "@shared/ui/nav-link";
+import Link from "next/link";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { ComponentProps, useEffect, useState } from "react";
+import { FiShoppingCart } from "react-icons/fi";
+import { LuMenu, LuX } from "react-icons/lu";
 
 interface HeaderProps extends ComponentProps<"header"> {
   isScrolled?: boolean;
+  isHomePage?: boolean;
+}
+
+function GlobalSearch({ className }: { className?: string }) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const [query, setQuery] = useState(searchParams.get("query") || "");
+
+  const handleSearch = (value: string) => {
+    const isDishesPage = pathname === "/dishes";
+    const params = isDishesPage
+      ? new URLSearchParams(searchParams.toString())
+      : new URLSearchParams();
+
+    if (value) {
+      params.set("query", value);
+    } else {
+      params.delete("query");
+    }
+
+    if (params.get("page")) {
+      params.delete("page");
+    }
+
+    router.push(`/dishes?${params.toString()}`);
+  };
+
+  return (
+    <SearchInput
+      containerClassName={className}
+      value={query}
+      onChange={(e) => setQuery(e.target.value)}
+      onSearch={handleSearch}
+    />
+  );
 }
 
 export function Header(props: ComponentProps<"header">) {
   const isMobile = useMobile();
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,9 +73,9 @@ export function Header(props: ComponentProps<"header">) {
   }, []);
 
   return isMobile ? (
-    <MobileHeader isScrolled={isScrolled} {...props} />
+    <MobileHeader isScrolled={isScrolled} isHomePage={isHomePage} {...props} />
   ) : (
-    <DesktopHeader isScrolled={isScrolled} {...props} />
+    <DesktopHeader isScrolled={isScrolled} isHomePage={isHomePage} {...props} />
   );
 }
 
@@ -51,7 +90,23 @@ function CartButton() {
   );
 }
 
-function MobileHeader({ isScrolled, className, ...props }: HeaderProps) {
+function HeaderLogo({ isScrolled, isHomePage }: HeaderProps) {
+  return (
+    <Logo
+      className={cn(
+        "w-30 md:w-36 lg:w-42",
+        isHomePage && !isScrolled && "hue-rotate-180 invert",
+      )}
+    />
+  );
+}
+
+function MobileHeader({
+  isScrolled,
+  isHomePage,
+  className,
+  ...props
+}: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -74,9 +129,7 @@ function MobileHeader({ isScrolled, className, ...props }: HeaderProps) {
           >
             <LuMenu className="w-6 h-6" />
           </Button>
-          <Logo
-            className={cn("w-24", !isScrolled && "hue-rotate-180 invert")}
-          />
+          <HeaderLogo isScrolled={isScrolled} isHomePage={isHomePage} />
         </div>
         <div className="flex items-center gap-2">
           <CartButton />
@@ -106,7 +159,7 @@ function MobileHeader({ isScrolled, className, ...props }: HeaderProps) {
             </div>
 
             <div className="w-full">
-              <SearchInput className="w-full" />
+              <GlobalSearch className="w-full" />
             </div>
 
             <nav className="flex flex-col gap-4">
@@ -122,10 +175,10 @@ function MobileHeader({ isScrolled, className, ...props }: HeaderProps) {
               <SignedOut>
                 <div className="flex flex-col gap-2 mt-4">
                   <SignInButton>
-                    <Button variant="primary">Se connecter</Button>
+                    <Button>Se connecter</Button>
                   </SignInButton>
                   <SignUpButton>
-                    <Button variant="primary">S&apos;inscrire</Button>
+                    <Button variant="outline">S&apos;inscrire</Button>
                   </SignUpButton>
                 </div>
               </SignedOut>
@@ -137,7 +190,12 @@ function MobileHeader({ isScrolled, className, ...props }: HeaderProps) {
   );
 }
 
-function DesktopHeader({ isScrolled, className, ...props }: HeaderProps) {
+function DesktopHeader({
+  isScrolled,
+  isHomePage,
+  className,
+  ...props
+}: HeaderProps) {
   return (
     <header
       className={cn(
@@ -148,12 +206,7 @@ function DesktopHeader({ isScrolled, className, ...props }: HeaderProps) {
       {...props}
     >
       <div className="flex gap-8 items-center">
-        <Logo
-          className={cn(
-            "w-30 md:w-36 lg:w-42",
-            !isScrolled && "hue-rotate-180 invert",
-          )}
-        />
+        <HeaderLogo isScrolled={isScrolled} isHomePage={isHomePage} />
 
         <nav className="flex gap-3 md:gap-6 items-center">
           <NavLink href="/" isScrolled={isScrolled}>
@@ -169,11 +222,11 @@ function DesktopHeader({ isScrolled, className, ...props }: HeaderProps) {
       </div>
 
       <div className="flex items-center gap-3">
-        <SearchInput />
+        <GlobalSearch />
         <CartButton />
         <SignedOut>
           <SignInButton>
-            <Button variant="primary">Se connecter</Button>
+            <Button>Se connecter</Button>
           </SignInButton>
         </SignedOut>
         <SignedIn>

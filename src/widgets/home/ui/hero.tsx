@@ -41,17 +41,14 @@ export function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/contact"
-            className={buttonVariants({ variant: "primary", size: "lg" })}
-          >
+          <Link href="/contact" className={buttonVariants({ size: "xl" })}>
             Demander un devis
           </Link>
           <Link
             href="/dishes"
             className={cn(
-              buttonVariants({ variant: "outline", size: "lg" }),
-              "text-background border-background hover:border-transparent",
+              buttonVariants({ variant: "outline", size: "xl" }),
+              "text-secondary-foreground",
             )}
           >
             Découvrir nos Plats

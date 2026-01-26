@@ -1,8 +1,9 @@
+import { PRESTATIONS } from "@shared/config/prestations";
+import { cn } from "@shared/lib/tailwind";
+import { Logo } from "@shared/ui";
 import Link from "next/link";
 import { ComponentProps } from "react";
 import { LuMail, LuMapPin, LuPhone } from "react-icons/lu";
-import { cn } from "@shared/lib/tailwind";
-import { Logo } from "@shared/ui";
 
 export function Footer({ className, ...props }: ComponentProps<"footer">) {
   return (
@@ -20,7 +21,7 @@ export function Footer({ className, ...props }: ComponentProps<"footer">) {
               Gastronomie cacher haut de gamme pour vos événements privés et
               professionnels.
             </p>
-            <p className="font-sans font-bold text-primary">
+            <p className="font-sans font-bold text-secondary-foreground">
               Sous le contrôle du Beth Din de Paris – Glatt Halak Beth Yossef
             </p>
           </div>
@@ -84,31 +85,16 @@ export function Footer({ className, ...props }: ComponentProps<"footer">) {
           <div>
             <h3 className="font-serif text-xl font-bold mb-6">Prestations</h3>
             <ul className="space-y-3 font-sans text-white/80">
-              <li>
-                <Link href="#" className="hover:text-primary transition-colors">
-                  Mariages & Réceptions
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-primary transition-colors">
-                  Bar & Bat Mitsva
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-primary transition-colors">
-                  Shabbat & Fêtes
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-primary transition-colors">
-                  Événements professionnels
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-primary transition-colors">
-                  Repas d’affaires
-                </Link>
-              </li>
+              {PRESTATIONS.map((prestation) => (
+                <li key={prestation.id}>
+                  <Link
+                    href={prestation.href}
+                    className="hover:text-primary transition-colors"
+                  >
+                    {prestation.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
