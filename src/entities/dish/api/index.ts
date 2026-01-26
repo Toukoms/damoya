@@ -4,18 +4,18 @@ import { mock_dishes } from "./mock-data";
 
 export const findDishes = async (options: {
   query?: string;
-  categories?: Category;
+  category: Category;
 }): Promise<Dish[]> => {
-  const { query, categories } = options;
+  const { query, category } = options;
 
   // Simulate network delay
   await new Promise((resolve) => setTimeout(resolve, 100));
 
   let result = [...mock_dishes];
 
-  if (categories && categories.length > 0) {
+  if (category) {
     result = result.filter((dish) =>
-      dish.categories.some((cat) => categories.includes(cat)),
+      dish.categories.some((cat) => cat === category),
     );
   }
 
