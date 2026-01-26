@@ -9,11 +9,11 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "cdn.pixabay.com",
+        hostname: "plus.unsplash.com",
       },
       {
         protocol: "https",
-        hostname: "plus.unsplash.com",
+        hostname: "www.damoyatraiteur.fr",
       },
     ],
   },
