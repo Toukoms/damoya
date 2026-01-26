@@ -22,11 +22,11 @@ export default function DishList() {
     const fetchAndSortDishes = async () => {
       setLoading(true);
 
-      const categoryKey: Category = searchParams.get("category") || "all";
+      const categoryKey = searchParams.get("category") || "";
 
       const fetchedDishes = await findDishes({
-        category: categoryKey,
-        query: searchParams.get("query"),
+        category: categoryKey as Category,
+        query: searchParams.get("query") || "",
       });
 
       // Sort Logic
