@@ -57,17 +57,54 @@ export class CategoryNode {
     public key: string,
     public label: string,
     public children?: CategoryNode[],
+    public keywords: string[] = [],
   ) {}
 }
 
 export class CategoryTree {
   constructor(public root: CategoryNode) {}
 
-  getCategory(key: string): CategoryNode | undefined {
-    if (!this.root.children) {
-      this.root.children = [];
+  findNode(
+    key: string,
+  ): { node: CategoryNode; path: CategoryNode[] } | undefined {
+    const queue: { node: CategoryNode; path: CategoryNode[] }[] = [
+      { node: this.root, path: [this.root] },
+    ];
+
+    while (queue.length > 0) {
+      const { node, path } = queue.shift()!;
+      if (node.key === key) {
+        return { node, path };
+      }
+      if (node.children) {
+        for (const child of node.children) {
+          queue.push({ node: child, path: [...path, child] });
+        }
+      }
     }
-    return this.root.children.find((child) => child.key === key);
+    return undefined;
+  }
+
+  getAllDescendantKeys(key: string): string[] {
+    const result: string[] = [];
+    const found = this.findNode(key);
+    if (!found) return result;
+
+    const stack = [found.node];
+    while (stack.length > 0) {
+      const node = stack.pop()!;
+      result.push(node.key);
+      if (node.children) {
+        for (const child of node.children) {
+          stack.push(child);
+        }
+      }
+    }
+    return result;
+  }
+
+  getCategory(key: string): CategoryNode | undefined {
+    return this.findNode(key)?.node;
   }
 }
 

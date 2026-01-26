@@ -2,6 +2,7 @@ import { Dish } from "../model/dish";
 
 export const mock_dishes: Dish[] = [
   {
+    id: "d8d45b06-cb53-4a4d-b978-2a12de8af117",
     title: "Artichauts et oignons confits",
     description:
       "Artichauts et oignons confits, huile de tournesol, sel et épices",
@@ -13,6 +14,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-05-08T11:14:52.289Z"),
   },
   {
+    id: "6bc85e26-5e22-4423-9a24-2d0a402678d5",
     title: "Assortiment de Patisserie Lunch 18 Pièces",
     description: "42,65 € HT",
     price: 45,
@@ -23,6 +25,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-05-17T07:37:15.386Z"),
   },
   {
+    id: "61877431-daef-44fe-857f-41a91979731c",
     title: "Assortiment pistaches, cajous & amandes 500g",
     description:
       "Assortiment de différentes pistaches, noix de cajoux et amandes",
@@ -34,6 +37,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-10-17T15:36:35.028Z"),
   },
   {
+    id: "7a2726b9-5df6-4124-9694-27f50ef80264",
     title: "Babka",
     description: "9,48 € HT",
     price: 10,
@@ -44,28 +48,31 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-10-09T12:51:44.899Z"),
   },
   {
+    id: "38520215-881f-4db0-b4ad-2a7482c5630a",
     title: "Bagel Omelette Thon mayo - 15 pièces",
     description: "Mini bagel omelette thon mayonnaise , 24 pièces",
     price: 26,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "mini-bagels"],
     createdAt: new Date("2024-03-28T22:52:17.883Z"),
     updatedAt: new Date("2024-03-30T22:52:17.883Z"),
   },
   {
+    id: "2a15a82f-13b8-4782-8ac2-c26068f404b3",
     title: "Bagel omelette Thon mayo - 24 pièces",
     description: "Mini bagel omelette thon mayonnaise , 24 pièces",
     price: 40,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "mini-bagels"],
     createdAt: new Date("2024-09-21T04:22:01.872Z"),
     updatedAt: new Date("2024-09-25T04:22:01.872Z"),
   },
   {
+    id: "0ef7a235-d62e-4471-b647-37ec6ee48fdf",
     title: "Blé Tunisien Harissa & couscous",
     description:
       "Couscous viande de boeuf, blé, oignons, tomate concentrée, oeuf, harissa, huile de tournesol, sel et épices",
@@ -77,6 +84,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-02-19T21:00:37.234Z"),
   },
   {
+    id: "c7388821-6ddf-43e1-8c64-e264cc573638",
     title: "Boissons froides 20 personnes",
     description:
       "Formule boissons softs pour 20 personnes - 6 eaux plates 1.5L - 3 eaux pétillantes 1.5L - 2 Coca rouges 1.25L - 4 Coca zéro 1.25L - 3 Ice Tea 1L - 3 jus de pomme 1L",
@@ -88,6 +96,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2026-01-04T05:46:11.366Z"),
   },
   {
+    id: "c695673d-ccba-4e8a-80c5-9c1f3ab41723",
     title: "Boukha 1L",
     description: "Bouteille de Boukha, alcool fort en 1 Litre",
     price: 33.99,
@@ -98,6 +107,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-06-05T23:38:49.423Z"),
   },
   {
+    id: "7f151923-25bb-4bcd-b35e-e0d7532820e8",
     title: "Boukha 50CL",
     description: "Bouteille de Boukha, alcool fort en 50 cL",
     price: 26.9,
@@ -108,6 +118,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-01-12T04:09:19.041Z"),
   },
   {
+    id: "381afb46-c45e-4556-99f6-b17b0aa37f51",
     title: "Boule de Pain Céréale 30g Motsi",
     description: "Petite boule de pain complette Motsi aux céréales, 30g",
     price: 0.6,
@@ -118,6 +129,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-11-20T21:21:35.391Z"),
   },
   {
+    id: "2bb8cd2b-88f0-4786-bc1b-d3db87d66133",
     title: "Boule de Pain Céréale 60 g - Motsi",
     description: "Petite boule de pain complette Motsi aux céréales, 30g",
     price: 0.8,
@@ -128,6 +140,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-01-13T07:19:33.809Z"),
   },
   {
+    id: "de8f2670-4225-488d-9177-4f6c98128d9b",
     title: "Boule de Pain graine de Pavot 30g Mézonoth",
     description:
       "Petite boule de pain Mézonoth, parsemée de graines de pavot, 30g",
@@ -139,6 +152,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-05-19T09:34:36.657Z"),
   },
   {
+    id: "0af37d8f-6961-400f-b72f-df17ee3cde1b",
     title: "Boule de Pain graine de sésames 30g Mézonoth",
     description:
       "Petite boule de pain Mézonoth, parsemée de graines de sésame, 30g",
@@ -150,6 +164,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-04-21T10:47:08.098Z"),
   },
   {
+    id: "3b2bb920-4971-47a1-a442-ef15c7857f89",
     title: "Boules au miel - 15 pièces",
     description: "Petites boules de pâte sucrée au miel",
     price: 32,
@@ -160,6 +175,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-08-04T07:37:29.223Z"),
   },
   {
+    id: "3372d9b5-3abf-4a52-8230-193b34fcb552",
     title: "Boulette de Shabbat ( la boulette )",
     description: "Boulette de Shabbat à la viande hâchée, oignons et épices",
     price: 5,
@@ -170,6 +186,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-06-27T01:03:42.609Z"),
   },
   {
+    id: "f86365d8-0d26-4753-93a1-a007835a3c06",
     title: "Boutargue avec cire 200/220g",
     description: "Boutargue MEMMI , entre 200 et 220g",
     price: 24,
@@ -180,6 +197,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-09-17T13:57:38.073Z"),
   },
   {
+    id: "b62cf31f-e330-4552-9f16-223af337c21e",
     title: "Box - 4 Tartelettes Lunch : 2 Citron meringué & 2 Fraises",
     description:
       "Box de 4 Tartelettes Lunch : - Tartelette citron meringué x2 - Tartelette fraises x2",
@@ -191,6 +209,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-05-13T20:26:32.614Z"),
   },
   {
+    id: "85238609-e541-4a11-9a60-a908adfcb4da",
     title:
       "Box - 4 Tartelettes Lunch : citron meringué, chocolat, poire & amandine",
     description:
@@ -203,6 +222,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-01-28T00:33:15.860Z"),
   },
   {
+    id: "57bad28a-5066-4d37-89db-f72a36a958f4",
     title: "Box - 4 tartelettes lunch aux poires",
     description: "Box de 4 Tartelettes-2 poires 2 amandine",
     price: 12,
@@ -213,6 +233,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-04-29T14:44:38.252Z"),
   },
   {
+    id: "2532ded2-57e6-4202-a33e-c7d56516eb81",
     title: "Box - 4 Tartelettes lunch citron meringué",
     description: "Box de 4 Tartelettes citron meringué",
     price: 12,
@@ -223,6 +244,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-01-18T11:53:42.826Z"),
   },
   {
+    id: "23296b70-2ed1-499f-923a-3cad5a8f9abb",
     title: "Box Aileron de Poulet Pané du Chef 8 pièces",
     description:
       "Plateaux de plusieurs ailerons de poulet du chef, dorés et panés",
@@ -234,6 +256,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-03-10T00:11:08.763Z"),
   },
   {
+    id: "4e3ada2c-b1b2-4811-9a91-8845a02c38c8",
     title: "Box antipasti de légumes grillés",
     description:
       "Antipasti de divers légumes grillés : (mini poivron, mini aubergines, mini courgettes, mini carottes, fenouils, tomates sechées, champignons)",
@@ -245,6 +268,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-03-24T00:53:02.506Z"),
   },
   {
+    id: "7f83fad7-45ef-468f-a19d-81949588363e",
     title: "Box Cake farine nature",
     description: "8,48 € HT",
     price: 8.95,
@@ -255,17 +279,19 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-09-09T20:24:31.439Z"),
   },
   {
+    id: "c24f9d14-9a5d-4fb7-a5ea-8685a3d52429",
     title: "Box Cake pépie chocolat",
     description: "6,64 € HT",
     price: 7,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "sweet-platters", "oriental-cakes"],
     createdAt: new Date("2024-11-23T13:11:47.168Z"),
     updatedAt: new Date("2024-11-27T13:11:47.168Z"),
   },
   {
+    id: "9e645fed-dade-48aa-875e-a3e4b2d01ebf",
     title: "Box Mélangé - 2 Tartelettes citron & 2 Fraise",
     description:
       "Box Mélangée : - Tartelette citron meringué x2 - Tartelette fraise x2",
@@ -277,6 +303,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-05-01T21:06:58.227Z"),
   },
   {
+    id: "e38a3250-89af-402d-a89e-b11094a03769",
     title: "Box Mélangé - 2 Tartelettes citron & 2 Opéra Lunch",
     description:
       "Box Mélangée : - Tartelette citron meringué x2 - Petits gâteaux Opéra x2",
@@ -288,18 +315,20 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-06-27T17:37:59.969Z"),
   },
   {
+    id: "43b76f33-f1fe-410d-a146-4d40b890f3ed",
     title: "Box Mélangé - 2 Tartelettes citron & 2 Pommes",
     description:
       "Box Mélangée : - Tartelette citron meringué x2 - Tartelette pomme x2",
     price: 12,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "sweet-platters", "sweet-boxes"],
     createdAt: new Date("2025-05-02T23:46:31.804Z"),
     updatedAt: new Date("2025-05-03T23:46:31.804Z"),
   },
   {
+    id: "8920aebe-3425-48c9-80bc-53216ac6d7cb",
     title: "BOX MÉLANGÉ - 2 TARTELETTES POIRE & 2 AMANDINE",
     description: "Box de 4 Tartelettes-2 poires 2 amandine",
     price: 12,
@@ -310,6 +339,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-11-23T06:16:27.374Z"),
   },
   {
+    id: "c7bdea32-7f1f-46e9-920e-ddda85ae9f1a",
     title: "Box mini banatage au thon - 4 pièces",
     description:
       "Box de Pastel de pomme de terre, thon, accompagné de citron, 4 pièces",
@@ -321,6 +351,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-12-29T21:23:00.470Z"),
   },
   {
+    id: "630d2af4-3891-49ce-81ab-fcef8b9a967a",
     title: "Box mini boulous raisin sésame",
     description: "Mini gâteau tunisien au raisin, parsemé de graines de sésame",
     price: 9.95,
@@ -331,6 +362,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-03-03T07:38:33.838Z"),
   },
   {
+    id: "eebd6efe-b683-4ffb-80a2-014189c1650c",
     title: "Box mini burger oignons caramélisés - 5 pièces",
     description: "Box de mini burger, oignons caramélisés, 5 pièces",
     price: 12,
@@ -341,6 +373,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-08-27T11:08:41.510Z"),
   },
   {
+    id: "cc39900d-a09d-42e8-8e48-83e47e0e79a7",
     title: "Box Mini Croquants",
     description: "Mini gâteau croustillant aux amandes",
     price: 8.95,
@@ -351,6 +384,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-03-27T05:17:29.980Z"),
   },
   {
+    id: "30a674c2-5764-4173-9622-4b63c943f3a3",
     title: "Box Mini feuilleté saucisse, moutarde & miel",
     description:
       "Box de mini feuilleté saucisse, garnie d'une sauce moutarde et miel",
@@ -362,6 +396,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-10-14T01:53:05.999Z"),
   },
   {
+    id: "02f1a8be-301d-4ecd-8590-c2e085039781",
     title: "Box mini Fish burger - 5 pièces",
     description: "Box de mini burger au poisson, 5 pièces",
     price: 12,
@@ -372,6 +407,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-06-19T15:47:37.088Z"),
   },
   {
+    id: "ef8e541b-bc4b-49d2-9786-1997ef389a55",
     title: "Box mini hot dog crunchy - 5 pièces",
     description:
       "Box de mini hot dog, oignons croustillants et moutarde, 5 pièces",
@@ -383,17 +419,19 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-02-05T09:19:14.877Z"),
   },
   {
+    id: "1d102309-3e6b-4b48-8519-9972400fbc89",
     title: "Box Nuggets Poulet Panko sauce aigre douce - 4 pers",
     description: "9,48 € HT",
     price: 10,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "mini-burgers"],
     createdAt: new Date("2023-10-24T00:30:22.426Z"),
     updatedAt: new Date("2023-10-24T00:30:22.426Z"),
   },
   {
+    id: "72250525-a3bf-4b14-84cb-d80658b5d17c",
     title: "Box opéra - 4 pièces",
     description: "Box de 4 petits gâteaux Opéra",
     price: 12,
@@ -404,6 +442,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-04-06T23:29:22.470Z"),
   },
   {
+    id: "b15fce91-8ede-4f2c-97e0-f83214d6a8fc",
     title: "Box Tartelettes Lunch  - 12 pièces",
     description:
       "Assortiment de Tartelettes Lunch : • chocolat x 3 • citron meringué x 3 • poire x 3 • fraise X 3",
@@ -415,6 +454,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-01-31T13:47:38.948Z"),
   },
   {
+    id: "770c9522-e5db-47f8-8cc9-397d6fec724e",
     title: "Brick au thon - 20 pièces",
     description: "Bricks garnie de thon, 20 pièces",
     price: 40,
@@ -425,6 +465,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-02-27T13:49:04.534Z"),
   },
   {
+    id: "98399160-2caf-49af-9ad5-bc167ab0524b",
     title: "Cake Citron Pavot",
     description: "Cake citron pavot 10 parts",
     price: 15,
@@ -435,6 +476,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-08-22T04:40:49.101Z"),
   },
   {
+    id: "b24f84dd-edec-4c0f-a1b9-143d18e52a50",
     title: "Cake marbré",
     description: "Gâteau marbré saveur vanille",
     price: 15,
@@ -445,6 +487,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-05-05T14:10:53.603Z"),
   },
   {
+    id: "344c42a1-7822-4ac8-abf3-7f4c00095bb7",
     title: "Cake Nature",
     description: "Cake nature",
     price: 12,
@@ -455,6 +498,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-01-11T11:09:48.042Z"),
   },
   {
+    id: "7ffeb859-5415-4938-b5e7-5e30f6c1b3cd",
     title: "Cake saveur Chocolat",
     description: "Cake saveur chocolat",
     price: 15,
@@ -465,6 +509,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-06-12T09:20:19.431Z"),
   },
   {
+    id: "45f10f99-ec30-4b97-8ad9-80a7987ea509",
     title: "Carottes a cumin",
     description: "Salade de carottes râpées citronnée",
     price: 5,
@@ -475,6 +520,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-06-20T23:38:01.497Z"),
   },
   {
+    id: "ef5bb7e1-d869-4fe4-8195-d9d16a7967f8",
     title: "Carottes à l’harissa",
     description: "Salade de carottes, harissa",
     price: 5,
@@ -485,6 +531,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2026-01-06T19:06:55.519Z"),
   },
   {
+    id: "045ab7c6-20dd-4f7e-8586-485e13768f4b",
     title: "Carottes râpées",
     description: "Salade de carottes râpées citronnée",
     price: 5,
@@ -495,17 +542,19 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-06-29T22:59:50.293Z"),
   },
   {
+    id: "abfedf24-b001-4351-bdd4-6432a3eaa22c",
     title: "Carpaccio de betterave",
     description: "14,22 € HT",
     price: 15,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["shabbat", "savory-platters", "carpaccio"],
     createdAt: new Date("2024-12-03T17:21:55.779Z"),
     updatedAt: new Date("2024-12-03T17:21:55.779Z"),
   },
   {
+    id: "0d1e9cf1-2a1a-431e-8c35-95508a6e24c9",
     title: "Carpaccio de Boeuf pour 2-4 personnes",
     description: "Délicieux Carpaccio de Boeuf",
     price: 22,
@@ -516,6 +565,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2026-01-04T14:58:02.349Z"),
   },
   {
+    id: "8303f6c0-35b5-4cee-bd34-ddec212108e3",
     title: "Carpaccio de Saumon 2-4 personnes",
     description: "20,85 € HT",
     price: 22,
@@ -526,6 +576,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-05-22T06:57:45.107Z"),
   },
   {
+    id: "a2756c35-e093-49cf-a08a-baa4e52fafd5",
     title: "Caviar d’aubergines",
     description: "Aubergine cuite au four, réduite en purée",
     price: 6,
@@ -536,6 +587,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-11-29T06:58:46.223Z"),
   },
   {
+    id: "a6bf30b2-7974-45a0-984d-80291740404c",
     title: "Club charcuterie - 30 Pièces",
     description: "Petits sandwich, garnis de charcuterie fine, 30 pièces",
     price: 40,
@@ -546,6 +598,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-08-10T20:32:28.534Z"),
   },
   {
+    id: "20769688-6324-4741-971d-1ef5cf2866bf",
     title: "Club sandwich saumon fumé - 30 pièces",
     description: "Petits sandwich, garnis de saumon fumé, 30 pièces",
     price: 40,
@@ -556,6 +609,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-01-12T11:54:07.947Z"),
   },
   {
+    id: "9b2d7369-3a97-42af-936f-c6ffb68165a5",
     title: "Club sandwich thon & mayo – 30 pièces",
     description: "Petits sandwich, garnis de thon et de mayonnaise, 30 pièces",
     price: 36,
@@ -566,6 +620,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-08-06T08:02:35.510Z"),
   },
   {
+    id: "71b7446e-4101-4020-a6ad-5de71ae604e9",
     title: "Coleslaw avec raisin sec",
     description:
       "Salade de carottes, de choux et de raisins secs, agrémenté de mayonnaise et d'un mélange de vinaigre",
@@ -577,6 +632,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-09-06T23:52:48.930Z"),
   },
   {
+    id: "95f29f1a-439f-41ed-a8cb-5d29a7c85174",
     title: "Couscous Bkeila",
     description:
       "Une magnifique Bkeila composé de viande de boeuf, haricots, oignons, épinards, huile de tournesol, sel et herbes saura vous régaler les papilles",
@@ -588,6 +644,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-06-21T04:51:39.415Z"),
   },
   {
+    id: "7663ccda-9f41-43fd-befa-2cc642637b35",
     title: "Couscous Loubia Bel Kemoun",
     description:
       "Couscous viande de boeuf, haricots, oignons, harissa, huile de tournesol, sel et herbes",
@@ -599,6 +656,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-10-04T17:30:45.168Z"),
   },
   {
+    id: "8a33922d-208e-41ed-9555-965f74bc211e",
     title: "Couscous Maison Viande de Boeuf  - Nouvelle boite",
     description:
       "Couscous viande de boeuf, carottes, navets, céleri, courgettes, oignons, pois chiches, huile de tournesol, sel et herbes",
@@ -610,6 +668,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-07-04T01:29:30.624Z"),
   },
   {
+    id: "34a9df8c-2cbd-4b84-8395-dee327197e5c",
     title: "Couscous Nikitouche",
     description:
       "Couscous poulet, céleri, nikitouche, huile de tournesol et sel",
@@ -621,18 +680,20 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-11-03T12:20:20.858Z"),
   },
   {
+    id: "0d68bed0-76ba-4c2d-889d-467c40dd2b12",
     title: "Crunchy chocolat 6 - 8 personnes",
     description:
       "Base de riz soufflé, chocolat et coulis de framboise, recouvert d'une mousse chocolat.",
     price: 38,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "sweet-platters", "entremets"],
     createdAt: new Date("2023-02-22T11:57:16.467Z"),
     updatedAt: new Date("2023-02-25T11:57:16.467Z"),
   },
   {
+    id: "10b5a12e-a44b-49a4-ade9-494530b0219b",
     title: "Dafina marocaine",
     description:
       "Viande, blé, riz, pois chiches, pommes de terre, oignons, oeuf, tomate concentrée, huile de tournesol, sel et épices",
@@ -644,6 +705,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-11-05T03:35:30.649Z"),
   },
   {
+    id: "38a15b93-b1ce-4269-986c-4b85f22ce90a",
     title: "Demi Patate Douce rôti au four avec tehina",
     description: "Demi Patate Douce rôti sauce Tehina et épices",
     price: 9,
@@ -654,6 +716,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-08-23T20:16:07.853Z"),
   },
   {
+    id: "5074380f-8d28-4854-bc47-42bdd24a5096",
     title: "Des d’Aubergine frits",
     description: "5,69 € HT",
     price: 6,
@@ -664,39 +727,43 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-05-15T13:41:37.777Z"),
   },
   {
+    id: "3e4d4d04-4bd5-4008-9d2d-6bb1bc50bd7f",
     title: "Éclair petit four vide",
     description: "Eclair taille petit four",
     price: 0.5,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "bakery"],
     createdAt: new Date("2025-02-21T07:59:30.767Z"),
     updatedAt: new Date("2025-02-23T07:59:30.767Z"),
   },
   {
+    id: "6771ede1-4d8f-4a73-95a1-6184ded5db7c",
     title: "Entremet Coco Passion - 6/8 personnes",
     description: "42,65 € HT",
     price: 45,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "sweet-platters", "entremets"],
     createdAt: new Date("2026-01-08T16:50:18.120Z"),
     updatedAt: new Date("2026-01-12T16:50:18.120Z"),
   },
   {
+    id: "3898463d-b931-46d6-b4a2-7d0b705c7908",
     title: "Entremet fruit rouge - 10/12 personnes",
     description: "49,29 € HT",
     price: 52,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "sweet-platters", "entremets"],
     createdAt: new Date("2024-10-24T07:22:43.209Z"),
     updatedAt: new Date("2024-10-28T07:22:43.209Z"),
   },
   {
+    id: "57ae4f9c-3542-4b85-b96c-e3c6b7b4e9ae",
     title: "Épaule d’Agneau Laquée pour 4 personnes",
     description: "Epaule d’Agneau laqué pour 4 à 6 personnes",
     price: 120,
@@ -707,6 +774,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-01-30T05:12:48.765Z"),
   },
   {
+    id: "81d5d5c8-2610-4289-885e-a3d094acba6d",
     title: "Fenouil au citron",
     description: "Salade de fenouil, citron et épices",
     price: 5,
@@ -717,6 +785,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-01-29T22:13:11.791Z"),
   },
   {
+    id: "1db018a4-d7ce-4260-9e9f-7202e8586a79",
     title: "Fenouil au citron - 10 Personnes",
     description: "Salade de fenouil, citron et épices 10 personnes",
     price: 22,
@@ -727,6 +796,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-09-08T15:24:02.336Z"),
   },
   {
+    id: "b518ed19-0e4b-40ac-a64f-f881e78366e2",
     title: "Fèves au cumin",
     description: "Salade fraîche de fèves, cumin",
     price: 5,
@@ -737,17 +807,19 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-03-13T21:19:11.351Z"),
   },
   {
+    id: "2bb40a9f-18c1-4fb7-bae8-113a2e48ad3c",
     title: "Ficelle Baguette farine Motsi",
     description: "0,57 € HT",
     price: 0.6,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "breakfast"],
     createdAt: new Date("2023-02-09T12:56:06.979Z"),
     updatedAt: new Date("2023-02-11T12:56:06.979Z"),
   },
   {
+    id: "197fc099-16f7-4dd6-a939-5aa48a7563a9",
     title: "Filet de poisson pané - Riz Blanc",
     description: "Filet de poisson pané, citron, accompagné de riz blanc",
     price: 22.9,
@@ -758,39 +830,43 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-10-31T17:34:00.534Z"),
   },
   {
+    id: "e0c6e14d-7688-4fc2-933d-03d838cd1c37",
     title: "Flan rond nature",
     description: "28,44 € HT",
     price: 30,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "sweet-platters", "viennoiseries"],
     createdAt: new Date("2025-05-16T07:17:47.408Z"),
     updatedAt: new Date("2025-05-17T07:17:47.408Z"),
   },
   {
+    id: "4ce9577f-fe83-448a-b413-205c3954ca02",
     title: "Fond de tarte Lunch",
     description: "Fond de tarte taille lunch",
     price: 0.8,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "bakery"],
     createdAt: new Date("2025-09-06T01:48:44.292Z"),
     updatedAt: new Date("2025-09-07T01:48:44.292Z"),
   },
   {
+    id: "1e3a9ec7-ed2b-426b-8cd5-f730131def57",
     title: "Fond de tarte petit four",
     description: "Fond de tarte taille petit four",
     price: 0.4,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "bakery"],
     createdAt: new Date("2024-06-18T23:45:23.800Z"),
     updatedAt: new Date("2024-06-20T23:45:23.800Z"),
   },
   {
+    id: "2b5525d8-14a7-4ebf-a4bd-acadf7201938",
     title: "Formule 4 plats au choix",
     description: "3 plats achetés 1 plat offert",
     price: 75,
@@ -801,6 +877,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-12-15T01:29:51.372Z"),
   },
   {
+    id: "086e25ea-0149-4193-b5c0-78111a2eefbf",
     title: "Formule COOL - 2 Pers ( pour 1 repas )",
     description:
       "55,92 € HT                \n2 plats au choix pour 2 personnes\n2 Halotes Maison\n4 Kémias au choix\nPassez Vos Commandes avant Mercredi 10h",
@@ -812,6 +889,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-10-22T15:43:24.833Z"),
   },
   {
+    id: "324656ab-d64b-4517-8fb3-2021675ae5f9",
     title: "Formule Poulet Rôti - 4 Personnes",
     description:
       "Formule POULET ROTI pour 4 Personnes comprennant 1 Poulet Rôti pour 4 Personnes 4 Kémias au choix 3 Accompagnements au choix 2 Halotes",
@@ -823,6 +901,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-07-05T11:31:20.078Z"),
   },
   {
+    id: "e26a9a1d-1f15-450a-92c5-4e049b7bffca",
     title: "Formule Prénium -10 Pers ( Pour 1 repas )",
     description:
       "378,20 € HT                \nDétentez vous , DAMOYA s’occupe de tout !\n2 Entrées au choix pour 5 personnes chacun ( 10 entrées au total )\n2 plats au choix pour 5 personnes chacun ( 10 parts au Total ) \nPack de 16 Kémias au choix\n5 Halotes\n10 Halotes Cocktail \nLivraison offerte !",
@@ -834,17 +913,19 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-10-27T00:24:12.537Z"),
   },
   {
+    id: "37c2d820-ebda-4ce0-831e-1f65e625179d",
     title: "Formule Prénium 6 Plats & 12 Kémias",
     description: "160,19 € HT",
     price: 169,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["shabbat", "formulas"],
     createdAt: new Date("2023-02-28T09:27:50.881Z"),
     updatedAt: new Date("2023-03-03T09:27:50.881Z"),
   },
   {
+    id: "2be81d17-9109-450e-9ef6-4b8093cae6b0",
     title: "Formule REELAX 4 Pers",
     description:
       "103,32 € HT                \n4 plats au choix \n3 Halotes\n5 Kémias au choix \nPassez Vos commandes avant Mercredi 10H",
@@ -856,6 +937,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-01-02T00:15:17.161Z"),
   },
   {
+    id: "a08b5fa0-e9d6-45cf-9e3f-9d104da86515",
     title: "Formule Super COOL - 2 Pers ( pour 1 Repas )",
     description:
       "80,57 € HT                \n5 Kémias au choix\n1 Mise en bouche\n2 Entrées au choix\n2 Plats au choix\n2 grandes Halotes ou 4 minis Halotes \nCommandez avant Mercredi 10h",
@@ -867,6 +949,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-11-16T01:59:48.032Z"),
   },
   {
+    id: "133caadf-4ea0-4d09-9f56-cd0df871fc98",
     title: "Formule ZEN -10 Pers ( Pour 1 repas )",
     description:
       "254,98 € HT                \nDétentez vous , DAMOYA s’occupe de tout !\n2 plats au choix pour 5 personnes chacun ( 10 parts au Total ) \nPack de 12 Kémias au choix\n5 Halotes\npour cette formule merci de passer vos commandes avant Lundi 12h",
@@ -878,6 +961,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-11-20T20:40:29.573Z"),
   },
   {
+    id: "55bda55b-5026-4faf-b75c-6f4d26aca4d0",
     title: "Gateau au chocolat sans GLUTEN 10 - 12 personnes",
     description: "47,39 € HT",
     price: 50,
@@ -888,6 +972,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-08-03T18:33:32.866Z"),
   },
   {
+    id: "9b09441e-1571-40ce-aa7f-d37f9afb8e89",
     title: "Gateau au chocolat sans GLUTEN 6 - 8 personnes",
     description: "36,02 € HT",
     price: 38,
@@ -898,17 +983,19 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-02-27T03:31:40.635Z"),
   },
   {
+    id: "3ad5cffa-10de-4602-a656-968c67fd6348",
     title: "Grand Bagel torsadé Sésame avec trou",
     description: "1,42 € HT",
     price: 1.5,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "bakery"],
     createdAt: new Date("2023-01-08T13:30:50.399Z"),
     updatedAt: new Date("2023-01-13T13:30:50.399Z"),
   },
   {
+    id: "cb59d699-ab23-4a44-b15e-5b41590c3478",
     title: "Hallah",
     description: "Pain Hallah",
     price: 2.5,
@@ -919,6 +1006,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-08-29T09:59:50.367Z"),
   },
   {
+    id: "0b3eb5a2-b72d-43a9-aa33-86086a1e93bb",
     title: "Hallah aux pépites de chocolat",
     description: "Pain Hallah recouvert de pépites de chocolat",
     price: 6,
@@ -929,6 +1017,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-07-08T14:11:48.340Z"),
   },
   {
+    id: "b7b32af9-1cfa-441e-9011-3a1c1ef51965",
     title: "Hallah sucrée",
     description: "Pain Hallah sucré",
     price: 5,
@@ -939,6 +1028,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-06-03T16:48:58.926Z"),
   },
   {
+    id: "e97316da-4ce4-4da9-87eb-d0ae0d1ed485",
     title: "Hallot x 2",
     description: "Pain Hallah, 2 pièces",
     price: 5,
@@ -949,6 +1039,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-01-03T03:45:11.293Z"),
   },
   {
+    id: "30157c8b-d8e5-4568-ac68-a1121deb01bf",
     title: "Hallot x 3",
     description: "Pan Hallah, 3 pièces",
     price: 7.5,
@@ -959,6 +1050,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-01-26T08:51:06.699Z"),
   },
   {
+    id: "a6e7dd48-1e09-4a5a-bf8f-7ea06a56f0dc",
     title: "Haricots verts, champignons poêlés",
     description:
       "Haricots verts poêlés, champignons, huile de tournesol, sel et poivre",
@@ -970,6 +1062,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-11-20T09:40:52.854Z"),
   },
   {
+    id: "af902dc7-9a8c-4aca-a42e-dc075792296e",
     title: "Houmous Bassar",
     description: "Délicieux Houmous à la viande, huile, sel et épices",
     price: 19,
@@ -980,6 +1073,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-05-11T15:59:21.834Z"),
   },
   {
+    id: "19919a3c-3cd3-4d65-a88d-2ac187cda180",
     title: "Houmous Bassar",
     description: "Délicieux Houmous à la viande, huile, sel et épices",
     price: 100,
@@ -990,6 +1084,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-09-26T09:01:54.767Z"),
   },
   {
+    id: "b43f4aca-6c75-4a01-bdd9-4865f55b9021",
     title: "Houmous maison",
     description: "Purée de pois chiche, tehina",
     price: 6,
@@ -1000,6 +1095,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2026-01-03T08:14:41.969Z"),
   },
   {
+    id: "6a093163-635d-4678-b8c3-ac4cf2ff3c6b",
     title: "Livraison Petite couronne",
     description:
       "Faites vous livrer en petite couronne des 20 €, noter le en note dans votre commande",
@@ -1011,17 +1107,19 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-11-29T16:11:45.433Z"),
   },
   {
+    id: "84e5601b-c780-469c-850e-6e76a805b796",
     title: "Location Petite Plata shabat",
     description: "Pour chauffer vos plats en toute serenité",
     price: 30,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["shabbat", "formulas"],
     createdAt: new Date("2023-02-08T00:03:37.090Z"),
     updatedAt: new Date("2023-02-10T00:03:37.090Z"),
   },
   {
+    id: "611e7223-5041-4911-a820-42cb16b7c698",
     title: "Macarons - 15 pièces",
     description: "Assortiment de Macarons frais, 15 pièces",
     price: 28,
@@ -1032,6 +1130,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-08-30T00:41:01.202Z"),
   },
   {
+    id: "f960683c-6fbe-437f-b8a1-a22dda660134",
     title: "Macarons - 24 pièces",
     description: "Assortiment de Macarons frais, 28 pièces",
     price: 42,
@@ -1042,6 +1141,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-07-01T14:54:37.245Z"),
   },
   {
+    id: "aecba5d7-fdff-4402-9799-1cbf1410f9bb",
     title: "Macarons Lunch CHOCOLAT",
     description: "Plateaux de macarons de 12 pièces ou 24 pièces SEULEMENT !",
     price: 2.99,
@@ -1052,6 +1152,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2026-01-12T19:03:14.159Z"),
   },
   {
+    id: "58053de7-5f87-4bbc-ac53-6310b94acdca",
     title: "Macarons Lunch COCO",
     description: "Plateaux de macarons de 12 pièces ou 24 pièces SEULEMENT !",
     price: 2.99,
@@ -1062,17 +1163,19 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-09-02T02:50:00.252Z"),
   },
   {
+    id: "365e75af-27c9-4998-8150-056286838b72",
     title: "Macarons Lunch FRAMBOISE",
     description: "Plateaux de macarons de 12 pièces ou 24 pièces SEULEMENT !",
     price: 2.99,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "sweet-platters", "macarons"],
     createdAt: new Date("2025-05-14T21:23:32.926Z"),
     updatedAt: new Date("2025-05-17T21:23:32.926Z"),
   },
   {
+    id: "9b33d612-5130-4ac9-bc7a-7f3c29f08528",
     title: "Macarons Succès Praline",
     description: "Gâteau macaron praliné",
     price: 38,
@@ -1083,6 +1186,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-11-08T17:58:14.110Z"),
   },
   {
+    id: "7fe4e967-2610-48b2-9453-40ccd2ae1c95",
     title: "Meringues - 24 pièces",
     description: "Plateau de mini meringue, 24 pièces",
     price: 30,
@@ -1093,6 +1197,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-05-04T08:42:58.797Z"),
   },
   {
+    id: "6cee32f8-a9ec-49bc-8e34-433b426b9adf",
     title: "Mini bagel oignons charcuterie, moutarde au miel - 6 pièces",
     description:
       "Mini bagel à la charcuterie fine, oignons, accompagné d'une sauce moutarde et miel, 6 pièces",
@@ -1104,6 +1209,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-08-23T05:23:16.860Z"),
   },
   {
+    id: "15200b25-e942-45cc-872f-b5a9bb2e4b56",
     title: "Mini bagel oignons charcuterie, moutarde au miel – 15 pièces",
     description:
       "Mini bagel à la charcuterie fine, oignons, accompagné d'une sauce moutarde et miel, 15 pièces",
@@ -1115,6 +1221,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-02-19T10:58:53.489Z"),
   },
   {
+    id: "2b0869ec-9e63-4de3-b7bf-ae9b17ba72f7",
     title: "Mini bagel oignons charcuterie, moutarde au miel – 24 pièces",
     description:
       "Mini bagel à la charcuterie fine, oignons, accompagné d'une sauce moutarde et miel, 24 pièces",
@@ -1126,6 +1233,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-10-08T16:24:01.491Z"),
   },
   {
+    id: "6db8044d-f3fa-4948-807d-1ab36d64b7e5",
     title: "Mini bagel poulet grillé, oignons, moutarde miel - 15 Pièces",
     description:
       "Mini Bagel sésame, avec poulet fraichement grillé, oignons caramélisés, moutarde au miel et mayonnaise maison, 15 pièces",
@@ -1137,6 +1245,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-10-03T15:09:56.082Z"),
   },
   {
+    id: "18a9465b-01e2-4387-b39a-437b2d233f88",
     title: "Mini bagel poulet grillé, oignons, moutarde miel – 24 pièces",
     description:
       "Mini Bagel sésame, avec poulet fraichement grillé, oignons caramélisés, moutarde au miel et mayonnaise maison, 24 pièces",
@@ -1148,6 +1257,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-09-26T07:14:29.081Z"),
   },
   {
+    id: "772e19e5-a200-4e82-b8b8-48d45cd7a13c",
     title:
       "Mini bagel poulet pané, oignons, moutarde miel sauce bbq– 15 pièces",
     description:
@@ -1155,12 +1265,13 @@ export const mock_dishes: Dish[] = [
     price: 30,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "mini-bagels"],
     createdAt: new Date("2025-10-29T06:20:53.268Z"),
     updatedAt: new Date("2025-10-30T06:20:53.268Z"),
   },
   {
+    id: "956ce117-6f90-443b-8d8e-85114a1e1772",
     title:
       "Mini bagel poulet pané, oignons, moutarde miel sauce bbq– 24 pièces",
     description:
@@ -1168,12 +1279,13 @@ export const mock_dishes: Dish[] = [
     price: 45,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "mini-bagels"],
     createdAt: new Date("2023-11-26T16:10:23.367Z"),
     updatedAt: new Date("2023-11-26T16:10:23.367Z"),
   },
   {
+    id: "4a968cca-b0f1-4c8a-8552-bcda37b12ac8",
     title: "Mini bagel saumon mayo aneth - 6 pièces",
     description: "Mini bagel au saumon fumé, mayonnaise et aneth, 6 pièces",
     price: 10,
@@ -1184,6 +1296,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-09-05T09:15:40.658Z"),
   },
   {
+    id: "0d083433-13d8-4f0a-bb3a-d9cccc8e51d5",
     title: "Mini bagel saumon mayo aneth – 15 pièces",
     description: "Mini bagel au saumon fumé, mayonnaise et aneth, 15 pièces",
     price: 28,
@@ -1194,6 +1307,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-11-13T15:49:15.228Z"),
   },
   {
+    id: "39cc2236-dd4c-4604-9adb-815796bc3d9f",
     title: "Mini bagel saumon mayo aneth – 24 pièces",
     description: "Mini bagel au saumon fumé, mayonnaise et aneth, 24 pièces",
     price: 45,
@@ -1204,6 +1318,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-01-10T14:39:03.767Z"),
   },
   {
+    id: "74e0c9dc-62e8-446e-968f-742153f5e6f1",
     title: "Mini Bagel Sésame",
     description: "Mini Bagel sésame",
     price: 1,
@@ -1214,6 +1329,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-09-26T11:54:03.865Z"),
   },
   {
+    id: "c5d5aa46-9a88-4c14-a239-88564f4a2860",
     title: "Mini bagel thon, mayo & aneth  - 6 pièces",
     description: "Mini bagel au thon, mayonnaise et aneth, 6 pièces",
     price: 9,
@@ -1224,6 +1340,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-07-14T22:15:28.725Z"),
   },
   {
+    id: "9e69f273-0236-4ccb-8357-ad9a37466335",
     title: "Mini bagel thon, mayo & aneth – 15 pièces",
     description: "Mini bagel au thon, mayonnaise et aneth, 15 pièces",
     price: 25,
@@ -1234,6 +1351,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-03-16T04:50:43.642Z"),
   },
   {
+    id: "e9f3f0e2-938c-48c5-a8d2-56857e78297d",
     title: "Mini bagel thon, mayo & aneth – 24 pièces",
     description: "Mini bagel au thon, mayonnaise et aneth, 24 pièces",
     price: 40,
@@ -1244,17 +1362,19 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-03-16T04:21:23.968Z"),
   },
   {
+    id: "ca6f94c4-da6c-43e9-bd17-968683fc053c",
     title: "Mini Bagel Végan omelette crudités - 24 pièces",
     description: "Mini bagel aux légumes, omelette et crudités, 24 pièces",
     price: 40,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "mini-bagels"],
     createdAt: new Date("2023-04-03T05:22:39.535Z"),
     updatedAt: new Date("2023-04-06T05:22:39.535Z"),
   },
   {
+    id: "2e770335-3c98-495f-be90-a53da8f0a398",
     title: "Mini banatage POULET  - 20 Pièces",
     description:
       "Box de Pastel de pomme de terre, poulet, accompagné de citron, 20 pièces",
@@ -1266,6 +1386,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-10-31T21:38:47.105Z"),
   },
   {
+    id: "457e4f4a-ffe1-48ad-8185-6fb348a26bea",
     title: "Mini banatage thon - 20 Pièces",
     description:
       "Box de Pastel de pomme de terre, thon, accompagné de citron, 20 pièces",
@@ -1277,17 +1398,19 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-06-03T00:23:54.294Z"),
   },
   {
+    id: "ee3b1afc-befd-46b7-b85e-f6bc37eca43f",
     title: "Mini Boulettes de viande au cumin 300g",
     description: "Mini boulette de boeuf au cumin",
     price: 15,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["shabbat", "appetizers"],
     createdAt: new Date("2025-01-28T05:13:59.582Z"),
     updatedAt: new Date("2025-01-28T05:13:59.582Z"),
   },
   {
+    id: "4415cdda-e350-4250-98cc-ed25b2780ab8",
     title: "Mini boulettes de viande au cumin, riz safrané",
     description:
       "Mini boulettes de viande hachées, semoule, cumin, tomate concentrée, huile de tournesol, sel et poivre",
@@ -1299,6 +1422,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-04-06T03:01:35.267Z"),
   },
   {
+    id: "eb0b787d-87a5-400d-bb71-cde5a287d51e",
     title: "Mini Boulettes de Viande petit pois & carottes, Riz safrané",
     description:
       "Mini Boulettes de Viande faite maison avec petits pois et carottes, semoule, et une sauce bien mojitée",
@@ -1310,17 +1434,19 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-01-23T14:21:34.646Z"),
   },
   {
+    id: "91d5f701-815c-449b-8d6e-b89ee7488d15",
     title: "Mini burger graine sésame vide",
     description: "0,95 € HT",
     price: 1,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "bakery"],
     createdAt: new Date("2024-08-24T17:44:25.131Z"),
     updatedAt: new Date("2024-08-24T17:44:25.131Z"),
   },
   {
+    id: "57b8ddff-9315-4122-b7c4-86949ae4bf21",
     title: "Mini burger oignons caramélisés – 15 pièces",
     description: "Plateau de mini burger, oignons caramélisés, 15 pièces",
     price: 26,
@@ -1331,6 +1457,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-09-29T05:19:40.435Z"),
   },
   {
+    id: "6b9e5449-0f8a-40e1-873f-d6f71c1c22c2",
     title: "Mini burger oignons caramélisés – 24 pièces",
     description: "Plateau de mini burger, oignons caramélisés, 24 pièces",
     price: 48,
@@ -1341,6 +1468,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-03-08T00:33:08.145Z"),
   },
   {
+    id: "e09d5f2b-3b0a-448b-845d-badb571cce1b",
     title: "Mini chicken burger oignons moutarde au miel sauce bbq - 15 pièces",
     description:
       "Plateau de Mini burger au poulet et aux oignons, garni d'une délicieuse sauce à la moutarde et au miel, ketchup, 15 pièces",
@@ -1352,6 +1480,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-04-04T02:26:32.857Z"),
   },
   {
+    id: "bcacd4fb-070b-400e-b929-ace85138264c",
     title: "Mini chicken burger oignons moutarde au miel sauce bbq - 24 pièces",
     description:
       "Plateau de Mini burger au poulet et aux oignons, garni d'une délicieuse sauce à la moutarde et au miel, ketchup, 24 pièces",
@@ -1363,6 +1492,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-12-16T22:22:10.956Z"),
   },
   {
+    id: "90f145c8-a8e4-4bbe-bf7e-f7b8670a859e",
     title: "Mini chicken burger oignons moutarde au miel sauce bbq - 5 pièces",
     description:
       "Plateau de Mini burger au poulet et aux oignons, garni d'une délicieuse sauce à la moutarde et au miel, ketchup, 5 pièces",
@@ -1374,6 +1504,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-11-13T05:24:03.076Z"),
   },
   {
+    id: "807958ee-6110-473c-8e29-75a92d76c991",
     title: "Mini chouquette - 40 pièces",
     description:
       "Petites bouchées en pâtes à choux, parsemées de sucre perlé, 40 pièces",
@@ -1385,28 +1516,31 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-03-13T05:19:02.345Z"),
   },
   {
+    id: "80ee5771-69a5-4b3f-96f8-eef7203ab5b5",
     title: "Mini Confiture Fraise",
     description: "1,42 € HT",
     price: 1.5,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "breakfast"],
     createdAt: new Date("2025-03-01T13:19:14.179Z"),
     updatedAt: new Date("2025-03-05T13:19:14.179Z"),
   },
   {
+    id: "c4200ee5-2b7c-40df-88b4-ca13767a2abb",
     title: "Mini feuilleté saumon – 30 pièces",
     description: "Plateau de mini feuilleté saumon, 30 pièces",
     price: 40,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "puff-pastries"],
     createdAt: new Date("2025-12-09T22:00:42.476Z"),
     updatedAt: new Date("2025-12-13T22:00:42.476Z"),
   },
   {
+    id: "3247b393-d13b-4af8-bd04-84b4b1e318bc",
     title: "Mini financier couleur - 28 pièces",
     description:
       "Plateau de mini gâteau financier de différentes couleurs, 28 pièces",
@@ -1418,6 +1552,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-03-17T00:31:53.102Z"),
   },
   {
+    id: "e9eda585-097e-421c-bb64-5cc6df52efba",
     title: "Mini fish burger – 15 pièces",
     description: "Plateau de mini burger au poisson, 15 pièces",
     price: 26,
@@ -1428,6 +1563,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-09-16T23:37:17.167Z"),
   },
   {
+    id: "091e9292-6cdd-4acc-a26c-4046d0b41244",
     title: "Mini fish burger – 24 pièces",
     description: "Plateau de mini burger au poisson, 24 pièces",
     price: 48,
@@ -1438,6 +1574,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-10-25T07:40:04.452Z"),
   },
   {
+    id: "09d22241-2f44-4d0a-ad05-d0209cac3e81",
     title: "Mini fondant chocolat - 15 pièces",
     description:
       "Plateau de mini gâteau au chocolat à la texture fondante, 20 pièces",
@@ -1449,6 +1586,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-07-06T18:35:01.042Z"),
   },
   {
+    id: "bcd5dabf-de44-4690-87d8-3bae6b4ed4d1",
     title: "Mini fricassé - 15 pièces",
     description: "Petits sandwich farcie au thon, 15 pièces",
     price: 26,
@@ -1459,6 +1597,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-01-27T22:57:14.351Z"),
   },
   {
+    id: "7448a0f2-5bdf-4399-a154-525ad15a2b62",
     title: "Mini fricassé - 24 pièces",
     description: "Petits sandwich farcie au thon, 24 pièces",
     price: 40,
@@ -1469,17 +1608,19 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-03-02T19:40:42.581Z"),
   },
   {
+    id: "4789059c-db91-4f91-ab81-f41e92437393",
     title: "Mini Fricassé vide",
     description: "0,66 € HT",
     price: 0.7,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "bakery"],
     createdAt: new Date("2025-12-13T20:58:42.832Z"),
     updatedAt: new Date("2025-12-18T20:58:42.832Z"),
   },
   {
+    id: "19f98ad1-e3b7-46bb-881e-d662c484647c",
     title: "Mini Hallah - 4",
     description: "Mini pain hallah, 4 pièces",
     price: 5,
@@ -1490,6 +1631,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-10-25T04:17:03.237Z"),
   },
   {
+    id: "28208feb-4c25-4306-ba00-4bc1587bd116",
     title: "Mini Hallah Cocktail - 10 pièces",
     description: "Mini pain hallah, 10 pièces",
     price: 10,
@@ -1500,6 +1642,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-01-24T20:48:15.343Z"),
   },
   {
+    id: "eb97855d-0433-483a-b723-b62158ec38cc",
     title: "Mini hot dog crunchy – 15 pièces",
     description:
       "Plateau de mini hot dog, oignons croustillants et moutarde, 15 pièces",
@@ -1511,6 +1654,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-01-18T13:28:10.795Z"),
   },
   {
+    id: "bb0bee59-e92b-471c-9cc1-27cdb4fea61d",
     title: "Mini hot dog crunchy – 24 pièces",
     description:
       "Plateau de mini hot dog, oignons croustillants et moutarde, 24 pièces",
@@ -1522,6 +1666,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-02-17T19:45:06.977Z"),
   },
   {
+    id: "a5de30c9-cedc-44e1-9a63-a4016d1850e3",
     title: "Mini Navette façon Sandwich Tunisien - 15 Pièces",
     description:
       "Nouvelle recette : Mini Navette façon Sandwich Tunisien composé  Mechouia , thon, oeuf dur ,",
@@ -1533,29 +1678,32 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-04-23T19:12:05.908Z"),
   },
   {
+    id: "f72c53f5-9de1-4aae-bc04-6b2a9caf7ef6",
     title: "Mini Pain Bagnat - 15 Pièces",
     description:
       "Mini Pain bagnat composé mayonnaise, thon, oeuf dur, tomate, concombre , salade verte",
     price: 35,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "tunisian-specialties"],
     createdAt: new Date("2025-08-24T10:09:23.943Z"),
     updatedAt: new Date("2025-08-27T10:09:23.943Z"),
   },
   {
+    id: "abb06ce1-ab16-4628-92ff-85bbb4203d13",
     title: "Mini Pain Bagnat farine narure",
     description: "Mini pain bagnat farine",
     price: 0.65,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "bakery"],
     createdAt: new Date("2023-06-13T17:38:10.985Z"),
     updatedAt: new Date("2023-06-17T17:38:10.985Z"),
   },
   {
+    id: "80220257-0646-4ebb-a458-3bec5bd9b390",
     title: "Mini pizza garnie – 20 pièces",
     description:
       "Plateau de mini pizza au thon, sauce tomate et olive, 20 pièces",
@@ -1567,6 +1715,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-12-10T16:33:37.268Z"),
   },
   {
+    id: "6138e932-1f4b-4acd-be47-5fd151842a2a",
     title: "Mini Plateau de Tropéziennes - 15 Pièces",
     description: "26,54 € HT",
     price: 28,
@@ -1577,6 +1726,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-05-28T07:06:51.059Z"),
   },
   {
+    id: "808b13e3-f918-4470-9f1b-263f82725cc9",
     title: "Mini tiramisu au café - 15 pièces",
     description: "Plateau de mini tiramisu au café, 15 pièces",
     price: 28,
@@ -1587,6 +1737,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-07-25T19:41:43.569Z"),
   },
   {
+    id: "bb93f862-ee70-43aa-b1bc-75b7752a5cc4",
     title: "Mini viennoiseries - 30 pièces",
     description: "36,97 € HT",
     price: 39,
@@ -1597,6 +1748,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-06-06T16:19:19.777Z"),
   },
   {
+    id: "6be9e578-56ea-44e2-8e76-fac4e9474386",
     title: "Mousse au chocolat - 15 pièces",
     description: "Plateau de mini mousse saveur chocolat, 15 pièces",
     price: 28,
@@ -1607,6 +1759,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-06-01T10:53:55.740Z"),
   },
   {
+    id: "53fc5ec7-9a56-40de-8eee-55fc4af76159",
     title: "Navets au citron",
     description: "Salade de navets citrons",
     price: 5,
@@ -1617,6 +1770,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-08-29T01:20:26.555Z"),
   },
   {
+    id: "df9e9284-0cee-414f-b183-20a0a59483f5",
     title: "Navette charcuterie – 20 pièces",
     description:
       "Plateau de mini sandwich navette, garni de charcuterie fine, 20 pièces",
@@ -1628,30 +1782,33 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-02-25T22:44:16.189Z"),
   },
   {
+    id: "cfeb8971-c515-45e9-818f-5c37a634a68a",
     title: "Navette thon mayo – 20 pièces",
     description:
       "Plateau de mini sandwich navette, garni de thon et mayonnaise, 20 pièces",
     price: 23,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "navettes"],
     createdAt: new Date("2024-06-05T01:50:31.983Z"),
     updatedAt: new Date("2024-06-06T01:50:31.983Z"),
   },
   {
+    id: "176d99b5-69ec-4299-8f13-ed994de65704",
     title: "Navette thon mechouïa - 20 pièces",
     description:
       "Plateau de mini sandwich navette, garni de thon et d'un mélange méchouia, 20 pièces",
     price: 24,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "navettes"],
     createdAt: new Date("2023-09-19T12:14:21.841Z"),
     updatedAt: new Date("2023-09-19T12:14:21.841Z"),
   },
   {
+    id: "6fa5ec1f-e7eb-4175-a558-3ab9a55f8a6e",
     title: "Number Cake 1 chiffre",
     description: "75,83 € HT",
     price: 80,
@@ -1662,6 +1819,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-05-26T18:50:27.673Z"),
   },
   {
+    id: "a822fe62-53b9-499d-90b7-8249cfb12fd0",
     title: "Number Cake 2 chiffres",
     description: "151,66 € HT",
     price: 160,
@@ -1672,6 +1830,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-01-14T18:17:46.458Z"),
   },
   {
+    id: "44cb057b-eebd-413a-89de-5d936b00f130",
     title: "Oeufs mayonnaise",
     description: "Oeufs durs, garni de mayonnaise",
     price: 5,
@@ -1682,6 +1841,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-05-13T07:46:58.920Z"),
   },
   {
+    id: "f2d2e639-a539-4022-b3e0-4ba94a008165",
     title: "Opéra 6 - 8 personnes",
     description: "42,65 € HT",
     price: 45,
@@ -1692,6 +1852,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-07-23T13:29:59.734Z"),
   },
   {
+    id: "71f9c15b-b7b5-4438-afea-c684c8378da4",
     title: "Pack de 12 salades Kémia au choix",
     description: "Pack de 12 Kémias parmis les salades Kémia suivante :",
     price: 60,
@@ -1702,6 +1863,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-01-25T17:33:57.549Z"),
   },
   {
+    id: "31e93542-17a7-494a-aefa-a6a68c64e3fe",
     title: "Pack Petit-Déjeuner Synagogue",
     description:
       "Mini Boulous sésame Mini Croquants Mini Cakes Nature Bouscoutou Mini ficelle farine avec Mini Confiture bonne maman fraise Mini Confiture bonne maman abricot Boule au miel Babka (Quantité du pack définie en fonction du nombre de personne)",
@@ -1713,17 +1875,19 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-12-23T10:52:50.502Z"),
   },
   {
+    id: "d0b72159-37fb-458e-8f96-c61db1d59d72",
     title: "Pain Bagnat Tunisien - 30 pièces",
     description: "47,39 € HT",
     price: 50,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "tunisian-specialties"],
     createdAt: new Date("2023-06-23T13:46:05.367Z"),
     updatedAt: new Date("2023-06-26T13:46:05.367Z"),
   },
   {
+    id: "a07f9ee9-26b5-46c2-9f7b-50333e025b1f",
     title: "Pain surprise saumon fumé",
     description:
       "Petits sandwich, garnis de saumon fumé et mayonnaise maison ,",
@@ -1735,6 +1899,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-01-13T01:34:30.700Z"),
   },
   {
+    id: "186f7d96-52cc-4c87-abb1-4aef13994cb6",
     title: "Pain surprise thon & mayo – 35 pièces",
     description: "Petits sandwich, garnis de thon et de mayonnaise,",
     price: 45,
@@ -1745,17 +1910,19 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-08-10T19:14:21.246Z"),
   },
   {
+    id: "5ef44691-6538-4f66-9492-4e2177db87bb",
     title: "Pâtes arabiata",
     description: "3,32 € HT",
     price: 3.5,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "vegan"],
     createdAt: new Date("2026-01-04T06:42:07.784Z"),
     updatedAt: new Date("2026-01-06T06:42:07.784Z"),
   },
   {
+    id: "d4c59957-b711-4296-85f5-8e30c1b51fe2",
     title: "Pavé de saumon à l’orientale, accompagné de riz safrané",
     description:
       "Moelleux Pavé de Saumon sauce à l'orientale, herbes et épices, accompagné de riz safrané",
@@ -1767,6 +1934,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-01-23T17:48:26.166Z"),
   },
   {
+    id: "6e1cae56-c449-4ebb-a57a-4cec7b0cf989",
     title: "Pavlova 15 Personnes",
     description: "42,65 € HT",
     price: 45,
@@ -1777,6 +1945,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-04-26T19:56:16.712Z"),
   },
   {
+    id: "eff5e862-7a88-4815-8963-56fa64e4624d",
     title: "Perche du Nil sauce à l'orientale , accompagné de riz safrané",
     description:
       "Moelleuse Perche du Nil sauce à l'orientale, herbes et épices, accompagné de riz safrané",
@@ -1788,6 +1957,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-09-25T19:28:18.662Z"),
   },
   {
+    id: "a6ad0198-7a67-4a5e-a56c-8d4b7bbe9d70",
     title: "Petit Sandwich Tunisien - Motsi - Nouvelle Recette",
     description:
       "Nouvelle recette : Petit Sandwich Tunisien composé de slata mechouia , thon, oeuf dur , citron confits, tomate, concombre , piments , pomme de terre , harissa",
@@ -1799,6 +1969,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-04-22T13:04:44.635Z"),
   },
   {
+    id: "4a1e4637-65d8-448c-87e6-c0a6092b9800",
     title: "Petits fours frais - 48 Pièces",
     description:
       "Plateau de différents petits fours frais fait maison, 48 pièces",
@@ -1810,6 +1981,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-02-24T08:56:08.017Z"),
   },
   {
+    id: "05203630-31d3-42b7-b338-99d5be310e9f",
     title: "Petits fours frais Éclair - 26 Pièces",
     description: "Plateau de petits éclairs chocolat et café, 26 pièces",
     price: 30,
@@ -1820,6 +1992,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-04-29T13:00:59.164Z"),
   },
   {
+    id: "60885c79-76f7-4e49-9abc-6c176084c01e",
     title: "Petits fours frais Éclair - 42 Pièces",
     description: "Plateau de petits éclairs chocolat et café, 42 pièces",
     price: 48,
@@ -1830,6 +2003,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-06-17T09:51:16.376Z"),
   },
   {
+    id: "5a384b01-ad9e-40b4-92ed-3081ec243301",
     title: "Pièce montée",
     description: "0,00 € HT",
     price: 0,
@@ -1840,6 +2014,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-05-12T18:37:40.322Z"),
   },
   {
+    id: "27782796-014e-4bcc-b0de-71ec815b30b5",
     title: "Pièce montée 40 choux – 10 à 20 personnes",
     description: "74,88 € HT",
     price: 79,
@@ -1850,6 +2025,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-11-10T20:17:01.968Z"),
   },
   {
+    id: "d9df4cf8-01ba-42f7-9257-06c352dd3ffb",
     title: "Pièce montée 60 choux pour 20 à 30 personnes",
     description: "90,05 € HT",
     price: 95,
@@ -1860,6 +2036,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-07-08T20:02:27.084Z"),
   },
   {
+    id: "964ab760-bd7b-40a6-9faf-40d8ab2e9eab",
     title: "Pièce montée 90 choux – 30 à 40 personnes",
     description: "141,23 € HT",
     price: 149,
@@ -1870,6 +2047,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-04-24T19:00:30.221Z"),
   },
   {
+    id: "29e808d3-0793-4aac-9382-31dc5d655337",
     title: "Pièce montée cœur",
     description: "170,62 € HT",
     price: 180,
@@ -1880,6 +2058,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-02-26T17:24:53.287Z"),
   },
   {
+    id: "aa077f0f-5d4c-4afa-9386-1e898915ac1e",
     title: "Pièce Montée Ytro  26 Choux",
     description: "55,92 € HT",
     price: 59,
@@ -1890,6 +2069,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-09-11T07:26:38.564Z"),
   },
   {
+    id: "dad2be2c-2c63-4c0c-be8f-36963ba4a5ae",
     title: "Piment frits",
     description: "5,69 € HT",
     price: 6,
@@ -1900,6 +2080,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-11-15T05:46:23.256Z"),
   },
   {
+    id: "2d8b275b-a62f-41e9-8967-cd6b4aae9ec9",
     title:
       "Pizza garnie légumes grillés et thon - 69 Pièces ( servi en 3 plateaux )",
     description:
@@ -1912,18 +2093,20 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-10-11T10:24:01.333Z"),
   },
   {
+    id: "0396043d-3d57-4a6c-8ae8-22e410fb85f2",
     title: "Plateau Aileron de Poulet Pané 10 personnes",
     description:
       "Plateaux de plusieurs ailerons de poulet du chef, dorés et panés",
     price: 45,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["shabbat", "savory-platters", "charcuterie"],
     createdAt: new Date("2023-11-21T13:24:44.642Z"),
     updatedAt: new Date("2023-11-26T13:24:44.642Z"),
   },
   {
+    id: "baf24816-f94b-4e43-94f4-c0e78d66c3ce",
     title: "Plateau Antipasti de légumes grillés pour 6 Personnes",
     description:
       "Plateau d'Antipasti de divers légumes grillés : (mini poivron, mini aubergines, mini courgettes, mini carottes, fenouils, tomates sechées, champignons)",
@@ -1935,6 +2118,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-11-10T15:26:42.193Z"),
   },
   {
+    id: "c70d22dc-50bb-4264-bb47-ec08ff10096b",
     title: "Plateau Assortiment de Sushis - 48 Pièces",
     description:
       "Assortiment de Sushi, californias, rolls, maki, eggs, saumon , tuna , surimi, avocat, concombre , oignons frits sauce salés et sauces sucrés inclus",
@@ -1946,6 +2130,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-12-28T13:32:04.997Z"),
   },
   {
+    id: "5dd67010-a014-476a-9d47-72bd10248a3f",
     title: "Plateau Cake farine nature 30 P",
     description: "30,33 € HT",
     price: 32,
@@ -1956,52 +2141,57 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-06-23T10:27:43.367Z"),
   },
   {
+    id: "0bc25048-204c-4477-844e-928252787372",
     title: "Plateau chausson thon - 24 Pièces",
     description:
       "Petits chaussons au thon, accompagné d'une préparation méchouia, 24 pièces",
     price: 30,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["shabbat", "savory-platters", "turnovers"],
     createdAt: new Date("2026-01-19T21:05:58.694Z"),
     updatedAt: new Date("2026-01-22T21:05:58.694Z"),
   },
   {
+    id: "a64371fe-acb8-4fa4-a7c8-3a91c18fee65",
     title: "Plateau de Brochette de Fruits - 35 Brochettes",
     description: "45,50 € HT",
     price: 48,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["shabbat", "desserts", "fresh-fruits"],
     createdAt: new Date("2024-02-19T10:29:47.606Z"),
     updatedAt: new Date("2024-02-19T10:29:47.606Z"),
   },
   {
+    id: "133aeb34-8f42-4e93-a510-3dcc10966d11",
     title: "Plateau de charcuterie 6 personnes",
     description: "Assortiment de charcuterie mélangée, pour 6 personnes",
     price: 26,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "charcuterie"],
     createdAt: new Date("2024-08-20T23:54:18.560Z"),
     updatedAt: new Date("2024-08-23T23:54:18.560Z"),
   },
   {
+    id: "3e651e9b-31bd-4597-85c5-a85088ba32cd",
     title: "Plateau de Filet de Poisson Pané - sauce béarnaise",
     description:
       "Plateau de Filets de Rouget pané, avec sa sauce Béarnaise By Damoya",
     price: 49,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "fish"],
     createdAt: new Date("2024-10-17T14:45:06.587Z"),
     updatedAt: new Date("2024-10-21T14:45:06.587Z"),
   },
   {
+    id: "d44f648a-94aa-443c-8220-7c73208368bf",
     title: "Plateau de fruits frais ( 10 Pers )",
     description: "Plateau de différents fruits frais de saison",
     price: 32,
@@ -2012,6 +2202,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-10-21T17:41:12.515Z"),
   },
   {
+    id: "98393438-b404-4246-9ed0-b202f198dfe5",
     title: "Plateau de Légumes crudités",
     description: "42,65 € HT",
     price: 45,
@@ -2022,17 +2213,19 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-02-16T09:02:28.368Z"),
   },
   {
+    id: "0bec3570-6be9-4ddc-a8a6-f4ee401fe282",
     title: "Plateau de Minina aux oeufs 30 parts",
     description: "Plateau de délicieuses petites omelettes épaisses",
     price: 35,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "tunisian-specialties"],
     createdAt: new Date("2025-08-24T15:32:18.843Z"),
     updatedAt: new Date("2025-08-28T15:32:18.843Z"),
   },
   {
+    id: "e871d77b-86ce-4df6-b7eb-7b700990d52b",
     title: "Plateau de Petits Fours - 24 Pièces",
     description:
       "Demi-Plateau de différents petits fours frais fait maison, 26 pièces",
@@ -2044,6 +2237,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-11-27T04:14:29.944Z"),
   },
   {
+    id: "6440a70c-3e40-42ca-ad1a-dc5caddbeb01",
     title: "Plateau de saumon fumé ( 10 personnes )",
     description:
       "Plateau de plusieurs tranches de saumon fumé, pour 6 personnes",
@@ -2055,6 +2249,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-01-09T19:21:10.348Z"),
   },
   {
+    id: "2b7ac036-c7ef-4332-bd07-9c61b9b727df",
     title: "Plateau de saumon mariné ( 10 personnes)",
     description: "Saumon mariné à l'aneth et huile d'olive pour 10 personnes",
     price: 40,
@@ -2065,6 +2260,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-05-17T14:38:41.855Z"),
   },
   {
+    id: "f74355ed-a0b1-4fb5-9916-55cf4bed85c2",
     title: "Plateau Mélangé  Viande - 35 Pièces",
     description:
       "Mini Burger, Mini Hot Dog , Mini Banatage Poulet, Mini Bagel charcuterie, Nuggets panko, Club charcuterie, Wraps charcuterie",
@@ -2076,6 +2272,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-12-30T03:01:26.086Z"),
   },
   {
+    id: "7a1696ef-22ac-4556-aeb9-0f46fc5a6611",
     title: "Plateau Mélangé Luxe Poisson - 35 Pièces",
     description:
       "Fish Burger, Pizza Anchoix, Navette Saumon, Navette Méchouia, Club sandwich thon mayonnaise, Pizza au Légumes, Bagel tuna ( contenu susceptible de changer en fonction des rupture de stocks )",
@@ -2087,6 +2284,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-09-04T09:22:28.492Z"),
   },
   {
+    id: "3eeae8f0-0262-4679-9941-065b2ae99ebf",
     title: "Plateau mini Boulous raisin & sésame 30 P",
     description: "Mini gâteau tunisien au raisin, parsemé de graines de sésame",
     price: 36,
@@ -2097,30 +2295,33 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-10-22T18:45:07.601Z"),
   },
   {
+    id: "7acbd6bf-e255-46de-bff7-ed8a068cec65",
     title: "Plateau Mini feuilleté saucisse, moutarde & miel – 30 pièces",
     description:
       "Plateau de mini feuilleté saucisse, garnie d'une sauce moutarde et miel, 30 pièces",
     price: 40,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "puff-pastries"],
     createdAt: new Date("2023-06-18T08:11:28.402Z"),
     updatedAt: new Date("2023-06-21T08:11:28.402Z"),
   },
   {
+    id: "44b8f721-9437-4287-ba95-2c064b0bed67",
     title: "Plateau Nuggets Poulet Panko avec sauce Bbq - 35 Piéces",
     description:
       "Plateau de Nuggets de poulet croustillants à souhaits servis avec sa sauce bbq",
     price: 49,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "mini-burgers"],
     createdAt: new Date("2025-10-06T17:58:15.222Z"),
     updatedAt: new Date("2025-10-11T17:58:15.222Z"),
   },
   {
+    id: "a8bcf568-f056-41c4-800e-4ffc9b26db1b",
     title: "Plateau repas Continental",
     description:
       "Plateau Repas Continental garni de Taboulé, salade de pâtes, saumon fumé, antispasti de légumes grillés, mini pizza, mini bagel tuna, mini bagel saumon, filet de poisson pané, assortiment de pistaches cajous & amandes, tarte au poire, opèra A déguster au Bureau ou entre amis",
@@ -2132,6 +2333,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-02-25T17:34:14.268Z"),
   },
   {
+    id: "2de3c5c2-0c95-4519-9b35-858bddbf1ff4",
     title: "Plateau Repas Prestige",
     description:
       "Plateau Repas Prestige composé de Carpaccio de boeuf sur de salade folle et sa sauce balsamique, mini pizza, mini navette, assortiment pistaches cajous & amandes, suprême de volaille sauce champignon, pomme de terre grenaille, haricots verts poêlés champignons poêlés, tarte au pomme, , pain mezonoth individuel, couverts, serviette A déguster au bureau ou entre amis",
@@ -2143,6 +2345,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-08-10T02:17:33.670Z"),
   },
   {
+    id: "a72504ce-44a9-4173-884c-a08815c24ecc",
     title: "Pomme de terre harissa",
     description: "Salade de pommes de terre, harissa",
     price: 5,
@@ -2153,6 +2356,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-02-20T23:36:34.974Z"),
   },
   {
+    id: "95b9075a-e877-435d-b5ef-65fe346de499",
     title: "Pomme de terre oeufs",
     description: "Salade de pommes de terre et oeufs",
     price: 6,
@@ -2163,6 +2367,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-05-10T06:14:01.875Z"),
   },
   {
+    id: "c3224f73-b81f-4c92-824e-940ddf327d72",
     title: "Pomme de terre thon & persil",
     description: "Salade de pommes de terre, thon, persil et herbes",
     price: 6,
@@ -2173,6 +2378,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-08-17T01:21:18.152Z"),
   },
   {
+    id: "cc110207-6a88-4ef6-8dea-4d5543914874",
     title: "Poulet chinois basilic",
     description:
       "Poulet chinois sauce basilic, poivrons, huile de tournesol, huile de sésame, sel",
@@ -2184,6 +2390,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-01-26T13:39:08.018Z"),
   },
   {
+    id: "d9252fa1-3638-4c91-a18f-7dc2457466fa",
     title: "Poulet chinois caramélisé",
     description:
       "Poulet chinois caramélisé, poivrons, oignons, sel, sucre, huile de tournesol, huile de sésame",
@@ -2195,6 +2402,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-10-17T16:32:48.651Z"),
   },
   {
+    id: "ac323323-a427-411e-9aaf-7adc198256a8",
     title: "Poulet rôti pour 4 personnes",
     description: "Poulet rôti entier, pour 4 personnes",
     price: 19,
@@ -2205,6 +2413,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-05-26T11:55:14.946Z"),
   },
   {
+    id: "bb265816-e633-468e-bd94-7a398e62aaa8",
     title: "Poulet sauté basilic, Riz cantonnais",
     description: "20,76 € HT",
     price: 21.9,
@@ -2215,6 +2424,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-07-21T00:41:48.060Z"),
   },
   {
+    id: "6ed2a6ac-3cc2-42c2-b384-d3bda33e5fee",
     title: "Poulet sauté caramélisé, Riz cantonnais",
     description:
       "Poulet chinois caramélisé, poivrons, oignons, sel, sucre, huile de tournesol, huile de sésame, accompagné de riz cantonais",
@@ -2226,6 +2436,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-11-04T10:10:04.469Z"),
   },
   {
+    id: "fcb16bf4-55c8-4ea7-b55c-596e8f9144d3",
     title: "Poulet sauté champignon noir",
     description:
       "Poulet chinois champignons noirs, carottes, oignons, huile de tournesol, huile de sésame, sel et sucre",
@@ -2237,6 +2448,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-02-20T06:01:22.932Z"),
   },
   {
+    id: "e724138d-73c7-4d56-b1a2-347f57f39c15",
     title: "Poulet sauté champignon noir, Riz cantonnais",
     description:
       "Poulet chinois champignons noirs, carottes, oignons, huile de tournesol, huile de sésame, sel et sucre, accompagné de riz cantonais",
@@ -2248,6 +2460,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-02-04T01:48:13.316Z"),
   },
   {
+    id: "982d33f2-086f-4551-85b6-8a6cb001f20b",
     title: "Praliné 6 - 8 personnes",
     description: "Gâteau praliné, pour 6 à 8 personnes",
     price: 32,
@@ -2258,6 +2471,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-10-15T06:41:29.646Z"),
   },
   {
+    id: "b6bb652a-1a6e-4dd3-bb13-e949fe2e3f30",
     title: "Profiteroles - 36 pièces",
     description:
       "Plateau de petits choux, remplis de crème patissière, 36 pièces",
@@ -2269,6 +2483,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-11-06T13:31:36.488Z"),
   },
   {
+    id: "1ac72971-6633-439b-b5a6-077e39144d12",
     title: "Riz Cantonais",
     description: "Riz cuit, sauté avec des oeufs, légumes et viande",
     price: 11,
@@ -2279,6 +2494,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2026-01-17T06:37:31.720Z"),
   },
   {
+    id: "91933df1-5b63-4f88-9f7c-c883387e615e",
     title: "Riz safrané",
     description: "Riz jaune au safran",
     price: 8,
@@ -2289,6 +2505,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-07-19T17:41:07.101Z"),
   },
   {
+    id: "22058fab-8593-43f4-b6a2-f5de1ed1de92",
     title: "Rôti de boeuf 2 tranches avec sauce",
     description: "2 Tranches de rôti de boeuf, accompagnées de sa sauce",
     price: 22,
@@ -2299,50 +2516,55 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-09-21T05:47:16.038Z"),
   },
   {
+    id: "b21f9662-dea2-4313-8212-98128c2bbb02",
     title: "Roulé Chocolat",
     description: "14,22 € HT",
     price: 15,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "sweet-platters", "entremets"],
     createdAt: new Date("2024-04-30T23:34:55.004Z"),
     updatedAt: new Date("2024-05-05T23:34:55.004Z"),
   },
   {
+    id: "a7e7d099-2ba6-431b-abc5-ff5afe81ce46",
     title: "Roulé Citron",
     description: "14,22 € HT",
     price: 15,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "sweet-platters", "entremets"],
     createdAt: new Date("2024-03-08T14:09:33.723Z"),
     updatedAt: new Date("2024-03-10T14:09:33.723Z"),
   },
   {
+    id: "2ff8eb52-c96d-481a-9c07-fdfd3f6d31c4",
     title: "Roulé fraise",
     description: "14,22 € HT",
     price: 15,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "sweet-platters", "entremets"],
     createdAt: new Date("2023-01-14T09:38:48.999Z"),
     updatedAt: new Date("2023-01-17T09:38:48.999Z"),
   },
   {
+    id: "fefdb9b4-1f53-4142-ad0e-c44c0b3b824a",
     title: "Roulé Praliné",
     description: "14,22 € HT",
     price: 15,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "sweet-platters", "entremets"],
     createdAt: new Date("2025-12-18T21:50:49.734Z"),
     updatedAt: new Date("2025-12-22T21:50:49.734Z"),
   },
   {
+    id: "551fbc06-e502-4501-9a61-6c661cf2caff",
     title: "Royal chocolat 6 - 8 personnes",
     description:
       "Gâteau praliné croustillant, biscuit amande et mousse au chocolat, pour 6 à 8 personnes",
@@ -2354,6 +2576,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-09-25T15:43:47.205Z"),
   },
   {
+    id: "fe20d39e-9076-4940-9528-9cec8f7e1cce",
     title: "Salade cuite",
     description: "5,69 € HT",
     price: 6,
@@ -2364,17 +2587,19 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-11-20T12:42:07.357Z"),
   },
   {
+    id: "1b27ddec-3b76-4bb4-989d-cc3b34b9e3d2",
     title: "Salade de Carottes râpées - 10 Personnes",
     description: "Salade de Carottes rappées",
     price: 18.9,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "vegan"],
     createdAt: new Date("2024-06-05T10:56:57.270Z"),
     updatedAt: new Date("2024-06-07T10:56:57.270Z"),
   },
   {
+    id: "1d84e2ed-c11b-49a2-ba6f-c5be4e7eeffd",
     title: "Salade de Coleslaw - 10 personnes",
     description: "Salade de Coleslaw avec raisins secs",
     price: 19.5,
@@ -2385,6 +2610,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-03-25T21:25:13.357Z"),
   },
   {
+    id: "5b41fb1b-ad8f-4f44-9f72-98a9816e464f",
     title: "Salade de fruits frais",
     description: "Salade de différents fruits frais de saison individuelle",
     price: 3.5,
@@ -2395,73 +2621,80 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-05-10T12:15:59.115Z"),
   },
   {
+    id: "6889196a-1f17-4b7e-bc35-2be6a4e41071",
     title: "Salade de Israélienne  - 4 - 6 Personnes",
     description: "Salade Israelienne de Tomates, concombres, oignons, poivrons",
     price: 19.5,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "vegan"],
     createdAt: new Date("2023-04-22T02:13:20.726Z"),
     updatedAt: new Date("2023-04-27T02:13:20.726Z"),
   },
   {
+    id: "e0dd031e-b0e0-4cdb-a615-82f5bbe26505",
     title: "Salade de Pâtes aux Légumes - 4 à 6 Personnes",
     description: "Salade de pâtes, avec ses legumes grillés",
     price: 26,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "vegan"],
     createdAt: new Date("2023-04-30T17:53:08.032Z"),
     updatedAt: new Date("2023-05-02T17:53:08.032Z"),
   },
   {
+    id: "d0a41aa6-0df9-482a-b09a-2cca78ee6dba",
     title: "Salade de Taboulé - 4 à 6 Personnes",
     description: "Salade de Taboulé, persil menthe tomate et concombre",
     price: 26,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "vegan"],
     createdAt: new Date("2024-04-07T06:31:39.197Z"),
     updatedAt: new Date("2024-04-12T06:31:39.197Z"),
   },
   {
+    id: "297f6358-de54-45b1-be61-e1f37d760cd5",
     title: "Salade de Taboulé individuel - La part",
     description: "Salade de Taboulé, persil menthe tomate et concombre",
     price: 4.5,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "vegan"],
     createdAt: new Date("2024-07-19T03:07:38.518Z"),
     updatedAt: new Date("2024-07-22T03:07:38.518Z"),
   },
   {
+    id: "fdcc7b03-2fd0-4fb1-9e47-e3a38e60f131",
     title: "Salade Folle - 10 personnes",
     description:
       "Salade folle composée d'endives, pommes, iceberg, carotte, tomate, concombre, accompagnée sauce vianigrette sucrée",
     price: 18,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "vegan"],
     createdAt: new Date("2024-04-20T13:22:25.143Z"),
     updatedAt: new Date("2024-04-21T13:22:25.143Z"),
   },
   {
+    id: "eaa4e640-76f0-4ca9-853c-58c36a7c6c28",
     title: "Salade Israélienne  - La Part",
     description: "Salade Israelienne de Tomates, concombres, oignons, poivrons",
     price: 4,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "vegan"],
     createdAt: new Date("2023-06-27T09:18:17.433Z"),
     updatedAt: new Date("2023-07-02T09:18:17.433Z"),
   },
   {
+    id: "d5e9ad84-0fba-4775-bfe0-7c8a527ccb5f",
     title: "Saumon à l’orientale La part",
     description:
       "Moelleux Pavé de Saumon sauce à l'orientale, herbes et épices, pour 1 personne",
@@ -2473,6 +2706,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-07-08T14:38:12.670Z"),
   },
   {
+    id: "8bab6f7e-82fa-47a9-8ba5-7282ac4b8947",
     title: "Semoule",
     description: "Semoule fine savoureuse",
     price: 5,
@@ -2483,6 +2717,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-08-18T11:40:06.522Z"),
   },
   {
+    id: "0b8a28c6-e35f-4995-900d-e42c644bc2e1",
     title: "Shnitzel, avec pomme grenailles",
     description:
       "Filet de Poulet Pané du chef, croustillant à souhait, accompagné de pommes de terre grenaille",
@@ -2494,6 +2729,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-08-25T02:36:40.061Z"),
   },
   {
+    id: "f8e30b43-e785-47b1-aaf3-ccf3d2ec89e2",
     title: "Slata méchouia",
     description:
       "Salade tunisienne, composée de poivrons, tomates, piments et oignons",
@@ -2505,6 +2741,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-09-09T01:24:15.981Z"),
   },
   {
+    id: "f489e880-d83f-4bfb-8bff-4fa12a3e3ecb",
     title: "Succès chocolat 6 - 8 personnes",
     description: "42,65 € HT",
     price: 45,
@@ -2515,6 +2752,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-11-20T12:43:47.580Z"),
   },
   {
+    id: "7f7c6ec7-c97e-41b4-9098-3983eee69ec5",
     title: "Succès pistache 6 - 8 personnes",
     description: "36,02 € HT",
     price: 38,
@@ -2525,6 +2763,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-11-29T14:55:07.174Z"),
   },
   {
+    id: "db9676d8-e59d-463c-9456-6ead162e48c7",
     title: "Succès Pistache 6 - 8 personnes",
     description: "42,65 € HT",
     price: 45,
@@ -2535,6 +2774,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-11-02T13:55:46.195Z"),
   },
   {
+    id: "bf13847e-f946-495c-acaa-5cac8c632be2",
     title: "Succès praline glacé chocolat - 10 personnes",
     description:
       "Gâteau praliné, glacé d'une fine couche de chocolat, pour 8 à 10 personnes",
@@ -2546,6 +2786,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-03-16T19:50:54.805Z"),
   },
   {
+    id: "d5323130-2141-4256-a173-b0338e08fe3d",
     title: "Succès vanille 10 - 12 personnes",
     description: "45,50 € HT",
     price: 48,
@@ -2556,6 +2797,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-01-21T10:32:55.449Z"),
   },
   {
+    id: "f9c95ab4-e5ca-40e0-bd51-7f77ddd3e80f",
     title: "Succès vanille 6 - 8 personnes",
     description: "42,65 € HT",
     price: 45,
@@ -2566,6 +2808,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-07-09T02:54:57.679Z"),
   },
   {
+    id: "ddaf00ef-d440-4616-81cb-a2bbe782affd",
     title: "Tajine de Poulet Olives & Champignons",
     description: "17,06 € HT",
     price: 18,
@@ -2576,6 +2819,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-02-20T00:23:23.240Z"),
   },
   {
+    id: "c58fff77-fbf7-46ae-b40c-916870ac1eaf",
     title: "Tajine de Poulet Olives & citrons confits,",
     description: "17,06 € HT",
     price: 18,
@@ -2586,6 +2830,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-10-25T02:22:58.989Z"),
   },
   {
+    id: "740c850c-8d4b-40e5-b7f3-95b3021d1274",
     title: "Tajine de Poulet Olives & citrons confits, riz safrané",
     description: "21,71 € HT",
     price: 22.9,
@@ -2596,6 +2841,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-06-30T09:29:51.342Z"),
   },
   {
+    id: "bcc54c0a-5d9e-43c3-81ad-8c2644d2b7b3",
     title: "Tarte Amandine 10 Personnes",
     description: "Tarte amandine, pour 10 personnes",
     price: 24,
@@ -2606,6 +2852,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-09-26T12:59:25.546Z"),
   },
   {
+    id: "a929bb93-adf1-4add-840d-bde90f13d87c",
     title: "Tarte au Chocolat 10 Personnes",
     description: "Tarte garnie de chocolat onctueuex",
     price: 24,
@@ -2616,17 +2863,19 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-07-07T15:51:28.623Z"),
   },
   {
+    id: "628cf7d4-518e-4c7a-92e7-95e7db920537",
     title: "Tarte aux fruits",
     description: "28,44 € HT",
     price: 30,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "sweet-platters", "tarts"],
     createdAt: new Date("2023-10-04T05:00:59.263Z"),
     updatedAt: new Date("2023-10-05T05:00:59.263Z"),
   },
   {
+    id: "06d5e632-7489-471e-bdac-67997c7eac72",
     title: "Tarte aux Poires 10 Personnes",
     description: "Tarte garnie de poires caramélisées, pour 10 personnes",
     price: 24,
@@ -2637,6 +2886,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-04-21T10:22:50.638Z"),
   },
   {
+    id: "9f6b5d02-654d-4b13-942b-f88714438dae",
     title: "Tarte aux pommes 10 Personnes",
     description: "Tarte garnie de pommes caramélisées, pour 10 personnes",
     price: 24,
@@ -2647,6 +2897,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-05-14T03:56:19.316Z"),
   },
   {
+    id: "221cf2a0-0384-4bcd-8924-334a0b15719a",
     title: "Tarte citron meringué 10 Personnes",
     description:
       "Tarte au citron, recouverte d'une épaisse meringue caramélisée, pour 10 personnes",
@@ -2658,18 +2909,20 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-07-13T04:45:02.131Z"),
   },
   {
+    id: "2d285cb7-b102-4a35-bc59-8acc2a45df0f",
     title: "Toasts de pain d’épices foie gras",
     description:
       "Délicieux petits toasts de pain d'épices, garnis de foie gras",
     price: 60,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "canapes"],
     createdAt: new Date("2025-01-28T09:56:21.207Z"),
     updatedAt: new Date("2025-01-31T09:56:21.207Z"),
   },
   {
+    id: "11b9ee74-57a6-48bb-8bd6-e37ff1e8043f",
     title: "Vin Rosé Cabernet D'anjou",
     description: "10,75 € HT",
     price: 12.9,
@@ -2680,28 +2933,31 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2023-01-16T20:54:04.078Z"),
   },
   {
+    id: "21fbdcb1-1250-41bc-96e3-9c97af1a1715",
     title: "Vin Rouge Petit Chaban",
     description: "10,75 € HT",
     price: 12.9,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["menu", "savory-platters", "drinks"],
     createdAt: new Date("2025-10-25T07:13:10.714Z"),
     updatedAt: new Date("2025-10-28T07:13:10.714Z"),
   },
   {
+    id: "9124358a-4956-486c-961e-4c8e38bb6b2e",
     title: "Vodka 1L",
     description: "Bouteille de Vodka, alcool fort en 1 Litre",
     price: 30,
     standardQuantity: "",
     imgUrl:
-      "https://www.damoyatraiteur.fr/photos/cms/LOGOS_DAMOYA/LOGO_OR_2_DAMOYA_TRAITEUR_2021.png",
+      "/logo.png",
     categories: ["shabbat", "appetizers"],
     createdAt: new Date("2024-12-09T04:02:20.627Z"),
     updatedAt: new Date("2024-12-12T04:02:20.627Z"),
   },
   {
+    id: "8a52be90-703d-4f75-b885-feb996cf7198",
     title: "Wrap's charcuterie - 36 Pièces",
     description: "Galette de maïs, garnie de charcuterie fine, 36 pièces",
     price: 40,
@@ -2712,6 +2968,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2024-08-05T12:18:43.028Z"),
   },
   {
+    id: "735e9847-de9d-46ec-ab2e-296920c178c3",
     title: "Wrap's chicken oigons - 36 Pièces",
     description: "Galette de maïs, garnie de poulet et d'oignons, 36 pièces",
     price: 45,
@@ -2722,6 +2979,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-02-27T03:27:22.501Z"),
   },
   {
+    id: "36d0ae95-6d53-421c-925e-17fa568d59ee",
     title: "Wrap's saumon fumé & avocat - 36 Pièces",
     description:
       "Galette de maïs, garnie de saumon fumé et d'avocat, 36 pièces",
@@ -2733,6 +2991,7 @@ export const mock_dishes: Dish[] = [
     updatedAt: new Date("2025-03-21T08:07:28.091Z"),
   },
   {
+    id: "24f93f6d-d195-45f2-b44c-c0dcc7b1b6c8",
     title: "Wrap's tuna - 36 Pièces",
     description:
       "Galette de maïs, garnie de thon, d'oignons et d'épices, 36 pièces",
