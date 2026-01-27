@@ -1,5 +1,6 @@
 "use client";
 
+import { useClerk, useUser } from "@clerk/nextjs";
 import { useOrder } from "@entities/order";
 import { QuantitySelector } from "@features/cart/ui/quantity-selector";
 import { Button, Input, MainWrapper } from "@shared/ui";
@@ -11,8 +12,15 @@ import { toast } from "sonner";
 
 export default function OrderPage() {
   const [promoCode, setPromoCode] = useState("");
-  const { orders, orderDishes, removeDishFromOrder, updateDishQuantity } =
-    useOrder();
+  const {
+    orders,
+    orderDishes,
+    removeDishFromOrder,
+    updateDishQuantity,
+    clearOrder,
+  } = useOrder();
+  const { isSignedIn } = useUser();
+  const clerk = useClerk();
 
   // Filter out any orders where we don't have the dish data (shouldn't happen ideally)
   const validOrders = orders.filter((order) =>
@@ -33,6 +41,15 @@ export default function OrderPage() {
     if (!promoCode) return;
     toast.success("Code promo appliqué !");
     setPromoCode("");
+  };
+
+  const handleOrderSubmit = () => {
+    if (!isSignedIn) {
+      clerk.openSignIn();
+      return;
+    }
+    toast.success("Votre commande a été envoyée et sera livrée bientôt.");
+    clearOrder();
   };
 
   return (
@@ -153,7 +170,11 @@ export default function OrderPage() {
                   </span>
                 </div>
 
-                <Button className="w-full" size="lg">
+                <Button
+                  className="w-full"
+                  size="lg"
+                  onClick={handleOrderSubmit}
+                >
                   Passer la commande
                 </Button>
 
