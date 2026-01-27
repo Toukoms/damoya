@@ -7,4 +7,6 @@ export * from "./card";
 export * from "./badge";
 export * from "./skeleton";
 export * from "./label";
+export * from "./input";
 export * from "./labeled-select";
+export * from "./sonner";
