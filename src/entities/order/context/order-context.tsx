@@ -36,7 +36,7 @@ export function OrderProvider({ children }: { children: ReactNode }) {
       return [
         ...prev,
         {
-          id: crypto.randomUUID(),
+          id: `${dish.id}-${Date.now()}`,
           dishId: dish.id,
           quantity,
           createdAt: new Date(),
