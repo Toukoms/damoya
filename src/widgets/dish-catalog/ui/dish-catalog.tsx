@@ -23,6 +23,8 @@ export function DishCatalog() {
   useEffect(() => {
     const fetchAndSortDishes = async () => {
       setLoading(true);
+      //FIXME: just to show the loading ui
+      await new Promise((resolve) => setTimeout(resolve, 2000));
 
       const categoryKey = searchParams.get("category") || "";
 

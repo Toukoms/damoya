@@ -11,6 +11,8 @@ interface PageProps {
 }
 
 export default async function DishDetailPage({ params }: PageProps) {
+  //FIXME: juste to show the loading ui
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   const { id } = await params;
   const dish = await getDishById(id);
 
