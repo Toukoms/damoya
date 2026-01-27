@@ -8,6 +8,6 @@ export type Dish = {
   standardQuantity?: string;
   imgUrl: string;
   categories: Category[];
-  createdAt: Date;
-  updatedAt: Date;
+  createdAt: Date | string;
+  updatedAt: Date | string;
 };

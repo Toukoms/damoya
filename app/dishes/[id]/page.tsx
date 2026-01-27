@@ -1,6 +1,6 @@
 import { getDishById } from "@/src/entities/dish/api";
-import { AddToCartButton } from "@/src/features/cart/ui/add-to-cart-button";
-import { Button, MainWrapper } from "@/src/shared/ui";
+import { AddToCartButton, BuyNowButton } from "@/src/features/cart";
+import { MainWrapper } from "@/src/shared/ui";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -19,6 +19,12 @@ export default async function DishDetailPage({ params }: PageProps) {
   if (!dish) {
     notFound();
   }
+
+  const safeDish = {
+    ...dish,
+    createdAt: new Date(dish.createdAt).toISOString(),
+    updatedAt: new Date(dish.updatedAt).toISOString(),
+  };
 
   const [intPrice, decimalPrice] = dish.price.toFixed(2).split(".");
 
@@ -146,9 +152,7 @@ export default async function DishDetailPage({ params }: PageProps) {
               buttonClassName="w-full bg-accent hover:bg-accent/90 text-accent-foreground border border-accent rounded-full shadow-sm"
               className="w-full"
             />
-            <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground border border-primary rounded-full shadow-sm h-10">
-              Acheter maintenant
-            </Button>
+            <BuyNowButton dish={dish} className="w-full" />
 
             <div className="text-xs text-muted-foreground mt-2">
               <div className="grid grid-cols-[80px_1fr] gap-1">

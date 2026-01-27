@@ -6,18 +6,15 @@ import { Button, MainWrapper } from "@/src/shared/ui";
 import { useClerk, useUser } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
 export default function OrderPage() {
-  const {
-    orders,
-    orderDishes,
-    removeDishFromOrder,
-    updateDishQuantity,
-    clearOrder,
-  } = useOrder();
+  const { orders, orderDishes, removeDishFromOrder, updateDishQuantity } =
+    useOrder();
   const { isSignedIn } = useUser();
   const clerk = useClerk();
+  const router = useRouter();
 
   // Filter out any orders where we don't have the dish data
   const validOrders = orders.filter((order) =>
@@ -44,8 +41,7 @@ export default function OrderPage() {
       clerk.openSignIn();
       return;
     }
-    toast.success("Votre commande a été envoyée et sera livrée bientôt.");
-    clearOrder();
+    router.push("/checkout");
   };
 
   const formatPrice = (price: number) => {
