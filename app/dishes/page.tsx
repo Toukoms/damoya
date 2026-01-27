@@ -1,7 +1,7 @@
-import { DishSkeleton } from "@/src/entities/dish/ui/dish-skeleton";
+import { DishListSkeleton } from "@entities/dish/ui/dish-skeleton";
 import { MainWrapper } from "@shared/ui";
+import { DishCatalog } from "@widgets/dish-catalog";
 import { Suspense } from "react";
-import DishList from "./dish-list";
 
 export default function DishesPage() {
   return (
@@ -17,8 +17,8 @@ export default function DishesPage() {
           </p>
         </div>
 
-        <Suspense fallback={<DishSkeleton />}>
-          <DishList />
+        <Suspense fallback={<DishListSkeleton />}>
+          <DishCatalog />
         </Suspense>
       </div>
     </MainWrapper>

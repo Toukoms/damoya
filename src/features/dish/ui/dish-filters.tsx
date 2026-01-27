@@ -1,9 +1,9 @@
 "use client";
 
-import { categoryTree } from "@/src/entities/dish/model/categories";
+import { useDishCategories } from "@/src/entities/dish/lib/use-dish-categories";
 import { Button, LabeledSelect } from "@/src/shared/ui";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useCallback, useMemo } from "react";
+import { useCallback } from "react";
 import { FaArrowDown, FaArrowUp } from "react-icons/fa";
 
 const sortOptions = [
@@ -20,51 +20,14 @@ export const DishFilters = () => {
   const currentSort = searchParams.get("sort") || "name";
   const currentOrder = searchParams.get("order") || "asc";
 
-  // Find the current category node and its path to reconstruct the selection state
-  const { path } = categoryTree.findNode(currentCategory) || { path: [] };
-  // path[0] is root, path[1] is Level 1, path[2] is Level 2, etc.
-  const rootNode = path[1];
-  const subNode = path[2];
-  const optionNode = path[3];
-
-  const rootOptions = useMemo(
-    () => [
-      { value: "all", label: "Toutes les catégories" },
-      ...(categoryTree.root.children?.map((child) => ({
-        value: child.key,
-        label: child.label,
-      })) || []),
-    ],
-    [],
-  );
-
-  const subOptions = useMemo(
-    () =>
-      rootNode
-        ? [
-            { value: rootNode.key, label: `Tout ${rootNode.label}` },
-            ...(rootNode.children?.map((child) => ({
-              value: child.key,
-              label: child.label,
-            })) || []),
-          ]
-        : [],
-    [rootNode],
-  );
-
-  const optionOptions = useMemo(
-    () =>
-      subNode
-        ? [
-            { value: subNode.key, label: `Tout ${subNode.label}` },
-            ...(subNode.children?.map((child) => ({
-              value: child.key,
-              label: child.label,
-            })) || []),
-          ]
-        : [],
-    [subNode],
-  );
+  const {
+    rootNode,
+    subNode,
+    optionNode,
+    rootOptions,
+    subOptions,
+    optionOptions,
+  } = useDishCategories(currentCategory);
 
   const createQueryString = useCallback(
     (name: string, value: string) => {

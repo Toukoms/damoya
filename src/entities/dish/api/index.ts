@@ -31,9 +31,6 @@ export const findDishes = async (options: {
   return result;
 };
 
-export const getDishById = async (id: string): Promise<Dish | undefined> => {
-  // Simulate network delay
-  await new Promise((resolve) => setTimeout(resolve, 100));
-
+export const getDishById = async (id: string): Promise<Dish | undefined> => {;
   return mock_dishes.find((dish) => dish.id === id);
 };

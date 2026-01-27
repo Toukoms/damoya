@@ -7,55 +7,19 @@ import {
   SignedOut,
   UserButton,
 } from "@clerk/nextjs";
-import { useOrder } from "@entities/order";
+import { CartButton } from "@features/cart";
+import { GlobalSearch } from "@features/search";
 import { cn } from "@shared/lib/tailwind";
 import { useMobile } from "@shared/lib/useMobile";
-import { Badge, Button, Logo, SearchInput } from "@shared/ui";
+import { Button, Logo, SearchInput } from "@shared/ui";
 import { NavLink } from "@shared/ui/nav-link";
-import Link from "next/link";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { ComponentProps, Suspense, useEffect, useState } from "react";
-import { FiShoppingCart } from "react-icons/fi";
 import { LuMenu, LuX } from "react-icons/lu";
 
 interface HeaderProps extends ComponentProps<"header"> {
   isScrolled?: boolean;
   isHomePage?: boolean;
-}
-
-function GlobalSearch({ className }: { className?: string }) {
-  const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-  const [query, setQuery] = useState(searchParams.get("query") || "");
-
-  const handleSearch = (value: string) => {
-    const isDishesPage = pathname === "/dishes";
-    const params = isDishesPage
-      ? new URLSearchParams(searchParams.toString())
-      : new URLSearchParams();
-
-    if (value) {
-      params.set("query", value);
-    } else {
-      params.delete("query");
-    }
-
-    if (params.get("page")) {
-      params.delete("page");
-    }
-
-    router.push(`/dishes?${params.toString()}`);
-  };
-
-  return (
-    <SearchInput
-      containerClassName={className}
-      value={query}
-      onChange={(e) => setQuery(e.target.value)}
-      onSearch={handleSearch}
-    />
-  );
 }
 
 export function Header(props: ComponentProps<"header">) {
@@ -77,26 +41,6 @@ export function Header(props: ComponentProps<"header">) {
     <MobileHeader isScrolled={isScrolled} isHomePage={isHomePage} {...props} />
   ) : (
     <DesktopHeader isScrolled={isScrolled} isHomePage={isHomePage} {...props} />
-  );
-}
-
-function CartButton() {
-  const { orders } = useOrder();
-  const totalItems = orders.reduce((acc, order) => acc + order.quantity, 0);
-
-  return (
-    <Link
-      href={"/orders"}
-      className="bg-background p-2 rounded-sm cursor-pointer relative"
-    >
-      <FiShoppingCart size={20} className="text-secondary" />
-      <Badge
-        variant="destructive"
-        className="absolute -top-1 -right-1 h-4 w-4 flex items-center justify-center p-0 text-[10px]"
-      >
-        {totalItems}
-      </Badge>
-    </Link>
   );
 }
 
