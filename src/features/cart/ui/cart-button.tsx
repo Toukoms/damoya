@@ -11,14 +11,10 @@ export function CartButton() {
   return (
     <Link
       href={"/orders"}
-      className="relative flex items-center p-2 cursor-pointer hover:opacity-80 transition-opacity gap-1"
+      className="relative flex items-center p-4 cursor-pointer hover:opacity-80 transition-opacity gap-1 bg-background text-foreground rounded-lg hover:bg-foreground/10"
     >
       <div className="relative flex items-center justify-center">
-        <FiShoppingCart
-          size={32}
-          className="text-foreground"
-          strokeWidth={1.5}
-        />
+        <FiShoppingCart size={32} strokeWidth={1.5} />
         <span className="absolute -top-3 left-1/2 font-bold text-accent text-lg w-full leading-none">
           {totalItems}
         </span>

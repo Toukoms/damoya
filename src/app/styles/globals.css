@@ -174,25 +174,6 @@ html {
   --shadow-lg: var(--shadow-lg);
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
-
-  /* Amazon Colors */
-  --color-amz-bg-grey: var(--amz-bg-grey);
-  --color-amz-bg-white: var(--amz-bg-white);
-  --color-amz-text-primary: var(--amz-text-primary);
-  --color-amz-text-secondary: var(--amz-text-secondary);
-  --color-amz-link: var(--amz-link);
-  --color-amz-link-hover: var(--amz-link-hover);
-  --color-amz-price-red: var(--amz-price-red);
-  --color-amz-star: var(--amz-star);
-  --color-amz-stock: var(--amz-stock);
-  --color-amz-btn-primary: var(--amz-btn-primary);
-  --color-amz-btn-primary-hover: var(--amz-btn-primary-hover);
-  --color-amz-btn-primary-border: var(--amz-btn-primary-border);
-  --color-amz-btn-secondary: var(--amz-btn-secondary);
-  --color-amz-btn-secondary-hover: var(--amz-btn-secondary-hover);
-  --color-amz-btn-secondary-border: var(--amz-btn-secondary-border);
-  --color-amz-badge-bg: var(--amz-badge-bg);
-  --color-amz-img-bg: var(--amz-img-bg);
 }
 body {
   font-family: var(--font-sans);

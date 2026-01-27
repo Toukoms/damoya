@@ -1,4 +1,4 @@
-import { Toaster } from "@/src/shared/ui";
+import { Toaster, WhatsAppButton } from "@/src/shared/ui";
 import "@app/styles/globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { OrderProvider } from "@entities/order";
@@ -42,6 +42,7 @@ export default function RootLayout({
             <Header className="px-2 md:px-4 lg:px-8" />
             <main className="grow">{children}</main>
             <Footer className="px-2 md:px-4 lg:px-8" />
+            <WhatsAppButton />
             <Toaster position="top-center" />
           </OrderProvider>
         </body>

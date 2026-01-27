@@ -10,3 +10,4 @@ export * from "./label";
 export * from "./input";
 export * from "./labeled-select";
 export * from "./sonner";
+export * from "./whatsapp-button";
