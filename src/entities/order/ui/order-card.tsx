@@ -60,8 +60,8 @@ export function OrderCard({
             </div>
             <div className="text-xs text-muted-foreground font-bold">
               Options :{" "}
-              <span className="font-normal text-muted-foreground">
-                {dish.description.substring(0, 30)}...
+              <span className="font-normal text-muted-foreground line-clamp-1">
+                {dish.description}
               </span>
             </div>
           </div>

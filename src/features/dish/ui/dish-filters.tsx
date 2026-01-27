@@ -1,10 +1,13 @@
 "use client";
 
 import { useDishCategories } from "@/src/entities/dish/lib/use-dish-categories";
+import { cn } from "@/src/shared/lib/tailwind";
 import { Button, LabeledSelect } from "@/src/shared/ui";
+import { GlobalSearch } from "@features/search";
+import { SearchInput } from "@shared/ui";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useCallback } from "react";
-import { FaArrowDown, FaArrowUp } from "react-icons/fa";
+import { Suspense, useCallback, useState } from "react";
+import { FaArrowDown, FaArrowUp, FaFilter } from "react-icons/fa";
 
 const sortOptions = [
   { value: "name", label: "Nom" },
@@ -28,6 +31,8 @@ export const DishFilters = () => {
     subOptions,
     optionOptions,
   } = useDishCategories(currentCategory);
+
+  const [showFilters, setShowFilters] = useState(false);
 
   const createQueryString = useCallback(
     (name: string, value: string) => {
@@ -64,70 +69,90 @@ export const DishFilters = () => {
 
   return (
     <div className="flex flex-col gap-4">
-      {/* Sort Controls */}
-      <div className="flex w-fit gap-2 items-end">
-        <LabeledSelect
-          id="sort-select"
-          className="flex-1 w-full"
-          label="Trier par :"
-          value={currentSort}
-          onValueChange={handleSortChange}
-          options={sortOptions}
-        />
-
+      <div className="flex gap-2 md:hidden">
+        <div className="flex-1">
+          <Suspense fallback={<SearchInput />}>
+            <GlobalSearch className="w-full" />
+          </Suspense>
+        </div>
         <Button
-          variant="outline"
+          variant={showFilters ? "default" : "outline"}
           size="icon"
-          onClick={toggleOrder}
-          title={
-            currentOrder === "asc" ? "Ordre croissant" : "Ordre décroissant"
-          }
-          className="mb-0.5" // Align with input
+          onClick={() => setShowFilters(!showFilters)}
         >
-          {currentOrder === "asc" ? (
-            <FaArrowUp className="h-4 w-4" />
-          ) : (
-            <FaArrowDown className="h-4 w-4" />
-          )}
+          <FaFilter />
         </Button>
       </div>
-      <div className="flex flex-col gap-4 lg:flex-row lg:items-end">
-        {/* Level 1: Categories */}
-        <LabeledSelect
-          id="category-select"
-          className="w-full sm:w-64"
-          label="Catégorie :"
-          value={rootNode?.key || "all"}
-          onValueChange={handleCategoryChange}
-          placeholder="Toutes les catégories"
-          options={rootOptions}
-        />
 
-        {/* Level 2: Sub-categories */}
-        {rootNode?.children && (
+      <div
+        className={cn("flex flex-col gap-4", !showFilters && "hidden md:flex")}
+      >
+        {/* Sort Controls */}
+        <div className="flex w-full gap-2 items-end md:w-fit">
           <LabeledSelect
-            id="subcategory-select"
-            className="w-full sm:w-64"
-            label="Sous-catégorie :"
-            value={subNode?.key || rootNode.key}
-            onValueChange={handleCategoryChange}
-            placeholder={`Tout ${rootNode.label}`}
-            options={subOptions}
+            id="sort-select"
+            className="flex-1 w-full"
+            label="Trier par :"
+            value={currentSort}
+            onValueChange={handleSortChange}
+            options={sortOptions}
           />
-        )}
 
-        {/* Level 3: Options */}
-        {subNode?.children && (
+          <Button
+            variant="outline"
+            size="icon"
+            onClick={toggleOrder}
+            title={
+              currentOrder === "asc" ? "Ordre croissant" : "Ordre décroissant"
+            }
+            className="mb-0.5" // Align with input
+          >
+            {currentOrder === "asc" ? (
+              <FaArrowUp className="h-4 w-4" />
+            ) : (
+              <FaArrowDown className="h-4 w-4" />
+            )}
+          </Button>
+        </div>
+
+        <div className="flex flex-col gap-4 md:flex-row md:items-end">
+          {/* Level 1: Categories */}
           <LabeledSelect
-            id="option-select"
-            className="w-full sm:w-64"
-            label="Option :"
-            value={optionNode?.key || subNode.key}
+            id="category-select"
+            className="w-full md:w-64"
+            label="Catégorie :"
+            value={rootNode?.key || "all"}
             onValueChange={handleCategoryChange}
-            placeholder={`Tout ${subNode.label}`}
-            options={optionOptions}
+            placeholder="Toutes les catégories"
+            options={rootOptions}
           />
-        )}
+
+          {/* Level 2: Sub-categories */}
+          {rootNode?.children && (
+            <LabeledSelect
+              id="subcategory-select"
+              className="w-full md:w-64"
+              label="Sous-catégorie :"
+              value={subNode?.key || rootNode.key}
+              onValueChange={handleCategoryChange}
+              placeholder={`Tout ${rootNode.label}`}
+              options={subOptions}
+            />
+          )}
+
+          {/* Level 3: Options */}
+          {subNode?.children && (
+            <LabeledSelect
+              id="option-select"
+              className="w-full md:w-64"
+              label="Option :"
+              value={optionNode?.key || subNode.key}
+              onValueChange={handleCategoryChange}
+              placeholder={`Tout ${subNode.label}`}
+              options={optionOptions}
+            />
+          )}
+        </div>
       </div>
     </div>
   );

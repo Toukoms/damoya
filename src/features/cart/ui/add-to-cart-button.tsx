@@ -2,7 +2,7 @@
 
 import { Dish } from "@/src/entities/dish/model/dish";
 import { useOrder } from "@/src/entities/order";
-import { cn } from "@/src/shared/lib/tailwind";
+import { cn, formatPrice } from "@/src/shared/lib";
 import { Badge, Button, QuantitySelector } from "@/src/shared/ui";
 import { useState } from "react";
 import { FaCartPlus } from "react-icons/fa";
@@ -33,7 +33,7 @@ export const AddToCartButton = ({
   const handleClick = () => {
     if (showQuantity && inCartQuantity > 0) {
       updateDishQuantity(dish.id, quantity);
-      toast.success("Panier mis à <jour");
+      toast.success("Panier mis à jour");
     } else {
       const qty = showQuantity ? quantity : 1;
       addDishToOrder(dish, qty);
@@ -71,10 +71,7 @@ export const AddToCartButton = ({
         {/* Show price if in detail mode (showQuantity=true) */}
         {showQuantity && (
           <span className="ml-auto italic">
-            {new Intl.NumberFormat("fr-FR", {
-              style: "currency",
-              currency: "EUR",
-            }).format(dish.price * quantity)}
+            {formatPrice(dish.price * quantity)}
           </span>
         )}
 
