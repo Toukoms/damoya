@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/src/shared/ui";
-import { cn } from "@/src/shared/lib/tailwind";
+import { cn } from "@/src/shared/lib";
 import { FaMinus, FaPlus } from "react-icons/fa";
 
 interface QuantitySelectorProps {

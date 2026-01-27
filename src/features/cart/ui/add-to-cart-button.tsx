@@ -3,11 +3,10 @@
 import { Dish } from "@/src/entities/dish/model/dish";
 import { useOrder } from "@/src/entities/order";
 import { cn } from "@/src/shared/lib/tailwind";
-import { Badge, Button } from "@/src/shared/ui";
+import { Badge, Button, QuantitySelector } from "@/src/shared/ui";
 import { useState } from "react";
 import { FaCartPlus } from "react-icons/fa";
 import { toast } from "sonner";
-import { QuantitySelector } from "./quantity-selector";
 
 interface AddToCartButtonProps {
   dish: Dish;
