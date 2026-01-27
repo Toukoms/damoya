@@ -43,7 +43,11 @@ export default function RootLayout({
             <main className="grow">{children}</main>
             <Footer className="px-2 md:px-4 lg:px-8" />
             <WhatsAppButton />
-            <Toaster position="top-center" />
+            <Toaster
+              position="top-center"
+              mobileOffset={{ top: 100 }}
+              swipeDirections={["top", "bottom", "left", "right"]}
+            />
           </OrderProvider>
         </body>
       </html>

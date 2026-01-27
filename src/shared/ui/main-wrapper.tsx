@@ -11,7 +11,7 @@ export function MainWrapper({
   return (
     <div
       className={cn(
-        "mt-16 mb-8 scroll-mt-16 md:mt-24 md:scroll-mt-24 lg:mt-32 lg:mb-16 lg:scroll-mt-32",
+        "mt-24 mb-8 md:scroll-mt-24 lg:mt-32 lg:mb-16 lg:scroll-mt-32",
         className,
       )}
     >

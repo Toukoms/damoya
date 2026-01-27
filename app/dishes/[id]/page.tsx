@@ -20,12 +20,6 @@ export default async function DishDetailPage({ params }: PageProps) {
     notFound();
   }
 
-  const safeDish = {
-    ...dish,
-    createdAt: new Date(dish.createdAt).toISOString(),
-    updatedAt: new Date(dish.updatedAt).toISOString(),
-  };
-
   const [intPrice, decimalPrice] = dish.price.toFixed(2).split(".");
 
   return (

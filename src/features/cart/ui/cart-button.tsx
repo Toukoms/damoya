@@ -11,11 +11,11 @@ export function CartButton() {
   return (
     <Link
       href={"/orders"}
-      className="relative flex items-center p-4 cursor-pointer hover:opacity-80 transition-opacity gap-1 bg-background text-foreground rounded-lg hover:bg-foreground/10"
+      className="relative flex items-center p-2 md:p-4 cursor-pointer hover:opacity-80 transition-opacity gap-1 bg-background text-foreground rounded-lg hover:bg-foreground/10"
     >
       <div className="relative flex items-center justify-center">
-        <FiShoppingCart size={32} strokeWidth={1.5} />
-        <span className="absolute -top-3 left-1/2 font-bold text-accent text-lg w-full leading-none">
+        <FiShoppingCart className="w-6 h-6 md:w-8 md:h-8" strokeWidth={1.5} />
+        <span className="absolute -top-2 md:-top-3 left-1/2 font-bold text-accent text-sm md:text-lg w-full leading-none">
           {totalItems}
         </span>
       </div>
