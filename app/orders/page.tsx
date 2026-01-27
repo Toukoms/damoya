@@ -1,17 +1,14 @@
 "use client";
 
+import { useOrder } from "@/src/entities/order";
+import { QuantitySelector } from "@/src/features/cart/ui/quantity-selector";
+import { Button, MainWrapper } from "@/src/shared/ui";
 import { useClerk, useUser } from "@clerk/nextjs";
-import { useOrder } from "@entities/order";
-import { QuantitySelector } from "@features/cart/ui/quantity-selector";
-import { Button, Input, MainWrapper } from "@shared/ui";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
-import { FaTrash } from "react-icons/fa";
 import { toast } from "sonner";
 
 export default function OrderPage() {
-  const [promoCode, setPromoCode] = useState("");
   const {
     orders,
     orderDishes,
@@ -22,7 +19,7 @@ export default function OrderPage() {
   const { isSignedIn } = useUser();
   const clerk = useClerk();
 
-  // Filter out any orders where we don't have the dish data (shouldn't happen ideally)
+  // Filter out any orders where we don't have the dish data
   const validOrders = orders.filter((order) =>
     orderDishes.some((d) => d.id === order.dishId),
   );
@@ -32,15 +29,14 @@ export default function OrderPage() {
     return total + (dish ? dish.price * order.quantity : 0);
   }, 0);
 
+  const totalItems = validOrders.reduce(
+    (acc, order) => acc + order.quantity,
+    0,
+  );
+
   const handleRemove = (dishId: string) => {
     removeDishFromOrder(dishId);
     toast.success("Produit retiré du panier");
-  };
-
-  const handleApplyPromo = () => {
-    if (!promoCode) return;
-    toast.success("Code promo appliqué !");
-    setPromoCode("");
   };
 
   const handleOrderSubmit = () => {
@@ -52,139 +48,172 @@ export default function OrderPage() {
     clearOrder();
   };
 
+  const formatPrice = (price: number) => {
+    return new Intl.NumberFormat("fr-FR", {
+      style: "currency",
+      currency: "EUR",
+    }).format(price);
+  };
+
   return (
     <MainWrapper>
-      <div className="container mx-auto px-4 py-8 mt-20">
-        <h1 className="text-3xl font-bold mb-8">Votre Panier</h1>
+      <div className="bg-background min-h-screen py-8">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            {/* Left Column - Cart Items */}
+            <div className="lg:col-span-3 bg-card p-6 shadow-sm rounded-sm">
+              <h1 className="text-2xl font-medium mb-1 border-b pb-4">
+                Votre Panier
+              </h1>
 
-        {validOrders.length === 0 ? (
-          <div className="text-center py-12">
-            <p className="text-muted-foreground mb-4">Votre panier est vide.</p>
-            <Button asChild>
-              <Link href="/dishes">Découvrir nos plats</Link>
-            </Button>
-          </div>
-        ) : (
-          <div className="grid gap-8 lg:grid-cols-3">
-            <div className="lg:col-span-2 space-y-4">
-              {validOrders.map((order) => {
-                const dish = orderDishes.find((d) => d.id === order.dishId);
-                if (!dish) return null;
-
-                return (
-                  <div
-                    key={order.id}
-                    className="flex gap-4 p-4 border rounded-lg bg-card shadow-sm"
+              {validOrders.length === 0 ? (
+                <div className="py-8">
+                  <p className="text-foreground mb-4 text-lg">
+                    Votre panier est vide.
+                  </p>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Le prix et la disponibilité des articles sur Damoya sont
+                    sujets à changement. Le panier est un lieu temporaire pour
+                    stocker une liste de vos articles et reflète le prix le plus
+                    récent de chaque article.
+                  </p>
+                  <Button
+                    asChild
+                    className="bg-accent hover:bg-accent/90 text-accent-foreground border border-accent rounded-lg shadow-sm"
                   >
-                    <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-md border bg-muted">
-                      <Image
-                        src={dish.imgUrl}
-                        alt={dish.title}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-
-                    <div className="flex flex-1 flex-col justify-between">
-                      <div className="flex justify-between">
-                        <div>
-                          <h3 className="font-semibold">{dish.title}</h3>
-                          <p className="text-sm text-muted-foreground line-clamp-1">
-                            {dish.description}
-                          </p>
-                        </div>
-                        <p className="font-bold">
-                          {new Intl.NumberFormat("fr-FR", {
-                            style: "currency",
-                            currency: "EUR",
-                          }).format(dish.price * order.quantity)}
-                        </p>
-                      </div>
-
-                      <div className="flex items-center justify-between mt-4">
-                        <div className="w-32">
-                          <QuantitySelector
-                            quantity={order.quantity}
-                            onIncrease={() =>
-                              updateDishQuantity(
-                                order.dishId,
-                                order.quantity + 1,
-                              )
-                            }
-                            onDecrease={() =>
-                              updateDishQuantity(
-                                order.dishId,
-                                Math.max(1, order.quantity - 1),
-                              )
-                            }
-                          />
-                        </div>
-
-                        <Button
-                          variant="ghost"
-                          size="icon"
-                          className="text-destructive hover:text-destructive/90"
-                          onClick={() => handleRemove(dish.id)}
-                        >
-                          <FaTrash className="h-4 w-4" />
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className="lg:col-span-1">
-              <div className="sticky top-24 p-6 border rounded-lg bg-card shadow-sm space-y-4">
-                <h2 className="text-xl font-semibold">Récapitulatif</h2>
-
-                <div className="flex justify-between py-2 border-b">
-                  <span>Sous-total</span>
-                  <span>
-                    {new Intl.NumberFormat("fr-FR", {
-                      style: "currency",
-                      currency: "EUR",
-                    }).format(totalPrice)}
-                  </span>
-                </div>
-
-                <div className="flex gap-2 py-4 border-b">
-                  <Input
-                    placeholder="Code promo"
-                    value={promoCode}
-                    onChange={(e) => setPromoCode(e.target.value)}
-                  />
-                  <Button variant="outline" onClick={handleApplyPromo}>
-                    Appliquer
+                    <Link href="/dishes">Découvrir nos plats</Link>
                   </Button>
                 </div>
+              ) : (
+                <>
+                  <div className="text-right text-sm text-muted-foreground mb-2 hidden lg:block">
+                    Prix
+                  </div>
+                  <div className="divide-y">
+                    {validOrders.map((order) => {
+                      const dish = orderDishes.find(
+                        (d) => d.id === order.dishId,
+                      );
+                      if (!dish) return null;
 
-                <div className="flex justify-between py-2 font-bold text-lg">
-                  <span>Total</span>
-                  <span>
-                    {new Intl.NumberFormat("fr-FR", {
-                      style: "currency",
-                      currency: "EUR",
-                    }).format(totalPrice)}
-                  </span>
+                      return (
+                        <div
+                          key={order.id}
+                          className="py-6 flex flex-col sm:flex-row gap-4"
+                        >
+                          {/* Image */}
+                          <Link
+                            href={`/dishes/${dish.id}`}
+                            className="shrink-0 mx-auto sm:mx-0"
+                          >
+                            <div className="relative h-44 w-44 overflow-hidden">
+                              <Image
+                                src={dish.imgUrl}
+                                alt={dish.title}
+                                fill
+                                className="object-contain"
+                              />
+                            </div>
+                          </Link>
+
+                          {/* Details */}
+                          <div className="flex-1">
+                            <div className="flex justify-between items-start">
+                              <div className="space-y-1">
+                                <Link
+                                  href={`/dishes/${dish.id}`}
+                                  className="text-lg font-medium text-foreground hover:underline leading-snug line-clamp-2"
+                                >
+                                  {dish.title}
+                                </Link>
+                                <div className="text-xs text-primary mt-1">
+                                  En stock
+                                </div>
+                                <div className="text-xs text-muted-foreground">
+                                  Expédié par Damoya
+                                </div>
+                                <div className="text-xs text-muted-foreground font-bold">
+                                  Options :{" "}
+                                  <span className="font-normal text-muted-foreground">
+                                    {dish.description.substring(0, 30)}...
+                                  </span>
+                                </div>
+                              </div>
+                              <div className="text-lg font-bold text-foreground text-right sm:hidden">
+                                {formatPrice(dish.price)}
+                              </div>
+                            </div>
+
+                            <div className="flex items-center gap-4 mt-4 flex-wrap">
+                              <QuantitySelector
+                                quantity={order.quantity}
+                                onIncrease={() =>
+                                  updateDishQuantity(
+                                    dish.id,
+                                    order.quantity + 1,
+                                  )
+                                }
+                                onDecrease={() =>
+                                  updateDishQuantity(
+                                    dish.id,
+                                    Math.max(1, order.quantity - 1),
+                                  )
+                                }
+                              />
+                              <div className="h-4 w-px bg-border hidden sm:block"></div>
+                              <button
+                                onClick={() => handleRemove(dish.id)}
+                                className="text-primary text-sm hover:underline"
+                              >
+                                Supprimer
+                              </button>
+                            </div>
+                          </div>
+
+                          {/* Price Desktop */}
+                          <div className="text-lg font-bold text-foreground text-right hidden sm:block w-32">
+                            {formatPrice(dish.price)}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  <div className="text-right text-xl py-4 border-t">
+                    Sous-total ({totalItems} articles):{" "}
+                    <span className="font-bold">{formatPrice(totalPrice)}</span>
+                  </div>
+                </>
+              )}
+            </div>
+
+            {/* Right Column - Summary */}
+            <div className="lg:col-span-1">
+              {validOrders.length > 0 && (
+                <div className="bg-card p-4 shadow-sm rounded-sm sticky top-16 sm:top-24 lg:top-32">
+                  <div className="text-lg mb-4">
+                    Sous-total ({totalItems} articles):{" "}
+                    <span className="font-bold">{formatPrice(totalPrice)}</span>
+                  </div>
+                  <Button
+                    onClick={handleOrderSubmit}
+                    className="w-full bg-accent hover:bg-accent/90 text-accent-foreground border border-accent rounded-full shadow-sm h-9"
+                  >
+                    Passer la commande
+                  </Button>
                 </div>
+              )}
 
-                <Button
-                  className="w-full"
-                  size="lg"
-                  onClick={handleOrderSubmit}
-                >
-                  Passer la commande
-                </Button>
-
-                <Button variant="outline" className="w-full" asChild>
-                  <Link href="/dishes">Continuer mes achats</Link>
-                </Button>
-              </div>
+              {validOrders.length > 0 && (
+                <div className="bg-muted p-4 shadow-sm rounded-sm mt-4 text-xs text-muted-foreground border border-border">
+                  <p className="mb-2">
+                    Les articles dans votre panier ne sont pas réservés.
+                  </p>
+                </div>
+              )}
             </div>
           </div>
-        )}
+        </div>
       </div>
     </MainWrapper>
   );

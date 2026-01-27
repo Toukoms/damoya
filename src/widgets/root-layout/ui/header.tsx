@@ -187,7 +187,6 @@ function DesktopHeader({
         <Suspense fallback={<SearchInput />}>
           <GlobalSearch />
         </Suspense>
-        <CartButton />
         <SignedOut>
           <SignInButton>
             <Button>Se connecter</Button>
@@ -196,6 +195,7 @@ function DesktopHeader({
         <SignedIn>
           <UserButton />
         </SignedIn>
+        <CartButton />
       </div>
     </header>
   );

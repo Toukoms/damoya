@@ -1,7 +1,6 @@
 "use client";
 
-import { useOrder } from "@entities/order";
-import { Badge } from "@shared/ui";
+import { useOrder } from "@/src/entities/order";
 import Link from "next/link";
 import { FiShoppingCart } from "react-icons/fi";
 
@@ -12,15 +11,22 @@ export function CartButton() {
   return (
     <Link
       href={"/orders"}
-      className="bg-background p-2 rounded-sm cursor-pointer relative"
+      className="relative flex items-center p-2 cursor-pointer hover:opacity-80 transition-opacity gap-1"
     >
-      <FiShoppingCart size={20} className="text-foreground" />
-      <Badge
-        variant="destructive"
-        className="absolute -top-1 -right-1 h-4 w-4 flex items-center justify-center p-0 text-[10px]"
-      >
-        {totalItems}
-      </Badge>
+      <div className="relative flex items-center justify-center">
+        <FiShoppingCart
+          size={32}
+          className="text-foreground"
+          strokeWidth={1.5}
+        />
+        <span className="absolute -top-3 left-1/2 font-bold text-accent text-lg w-full leading-none">
+          {totalItems}
+        </span>
+      </div>
+      <div className="hidden md:flex flex-col leading-tight pb-1">
+        <span className="text-xs text-foreground font-normal">Votre</span>
+        <span className="font-bold text-sm text-foreground">Panier</span>
+      </div>
     </Link>
   );
 }

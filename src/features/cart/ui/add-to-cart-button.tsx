@@ -12,12 +12,14 @@ import { QuantitySelector } from "./quantity-selector";
 interface AddToCartButtonProps {
   dish: Dish;
   className?: string;
+  buttonClassName?: string;
   showQuantity?: boolean;
 }
 
 export const AddToCartButton = ({
   dish,
   className,
+  buttonClassName,
   showQuantity = true,
 }: AddToCartButtonProps) => {
   const { addDishToOrder, orders, updateDishQuantity } = useOrder();
@@ -58,7 +60,7 @@ export const AddToCartButton = ({
       )}
 
       <Button
-        className="w-fit gap-2 relative overflow-visible"
+        className={cn("w-fit gap-2 relative overflow-visible", buttonClassName)}
         size={showQuantity ? "lg" : "sm"}
         onClick={handleClick}
       >
