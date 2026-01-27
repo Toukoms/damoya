@@ -1,5 +1,6 @@
 import { cn } from "@/src/shared/lib/tailwind";
 
+import { AddToCartButton } from "@/src/features/cart/ui/add-to-cart-button";
 import {
   Badge,
   Button,
@@ -10,14 +11,15 @@ import {
   CardTitle,
 } from "@/src/shared/ui";
 import Image from "next/image";
+import Link from "next/link";
 import { ComponentProps } from "react";
-import { FaCartPlus } from "react-icons/fa";
 import { Dish } from "../model/dish";
 
 type Props = Dish & ComponentProps<"div">;
 
 export const DishCard = (props: Props) => {
   const {
+    id,
     title,
     description,
     price,
@@ -43,7 +45,10 @@ export const DishCard = (props: Props) => {
       {...rest}
     >
       {/* Image Container */}
-      <div className="relative aspect-video w-full overflow-hidden bg-muted">
+      <Link
+        href={`/dishes/${id}`}
+        className="relative aspect-video w-full overflow-hidden bg-muted block"
+      >
         <Image
           src={imgUrl}
           alt={title}
@@ -51,14 +56,16 @@ export const DishCard = (props: Props) => {
           className="object-cover transition-transform duration-300 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
-      </div>
+      </Link>
 
       {/* Header with Title and Price */}
       <CardHeader className="pt-4 block">
         <div className="flex items-center justify-between gap-4">
-          <CardTitle className="line-clamp-1 text-lg font-semibold tracking-tight">
-            {title}
-          </CardTitle>
+          <Link href={`/dishes/${id}`} className="hover:underline">
+            <CardTitle className="line-clamp-1 text-lg font-semibold tracking-tight">
+              {title}
+            </CardTitle>
+          </Link>
           <Badge variant="secondary" className="shrink-0 font-bold">
             {new Intl.NumberFormat("fr-FR", {
               style: "currency",
@@ -74,10 +81,10 @@ export const DishCard = (props: Props) => {
       </CardContent>
 
       {/* Footer with Action Button */}
-      <CardFooter className="mt-auto">
-        <Button className="w-full gap-2" size="sm">
-          <FaCartPlus className="h-4 w-4" />
-          Ajouter au panier
+      <CardFooter className="mt-auto flex items-center w-full gap-2">
+        <AddToCartButton dish={props} showQuantity={false} />
+        <Button variant="outline" asChild>
+          <Link href={`/dishes/${id}`}>Voir détails</Link>
         </Button>
       </CardFooter>
     </Card>
