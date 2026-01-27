@@ -4,15 +4,21 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { OrderProvider } from "@entities/order";
 import { Footer, Header } from "@widgets/root-layout";
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Merriweather, Montserrat, Source_Code_Pro } from "next/font/google";
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const sans = Montserrat({
+  variable: "--font-sans",
   subsets: ["latin"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const serif = Merriweather({
+  variable: "--font-serif",
+  weight: ["300", "400", "700", "900"],
+  subsets: ["latin"],
+});
+
+const mono = Source_Code_Pro({
+  variable: "--font-mono",
   subsets: ["latin"],
 });
 
@@ -28,15 +34,15 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="fr" className="light">
+      <html lang="fr" className="dark">
         <body
-          className={`${playfair.variable} ${inter.variable} antialiased flex flex-col min-h-screen bg-background text-foreground font-sans`}
+          className={`${sans.variable} ${serif.variable} ${mono.variable} antialiased flex flex-col min-h-screen bg-background text-foreground font-sans`}
         >
           <OrderProvider>
             <Header className="px-2 md:px-4 lg:px-8" />
             <main className="grow">{children}</main>
             <Footer className="px-2 md:px-4 lg:px-8" />
-            <Toaster />
+            <Toaster position="top-center" />
           </OrderProvider>
         </body>
       </html>

@@ -18,12 +18,12 @@ export function Hero() {
           className="object-cover blur-[2px]"
           priority
         />
-        <div className="absolute inset-0 bg-black/35" />
+        <div className="absolute inset-0 bg-foreground/35" />
         <div className="absolute bottom-0 left-0 right-0 h-50 bg-linear-to-t from-background to-transparent" />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container-custom text-center text-white pt-32 md:pt-0">
+      <div className="relative z-10 container-custom text-center text-primary pt-32 md:pt-0">
         <h1 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
           L&apos;Excellence de la Gastronomie <br className="hidden md:block" />
           Cacher pour Vos Événements
@@ -46,10 +46,7 @@ export function Hero() {
           </Link>
           <Link
             href="/dishes"
-            className={cn(
-              buttonVariants({ variant: "outline", size: "xl" }),
-              "text-secondary-foreground",
-            )}
+            className={cn(buttonVariants({ variant: "outline", size: "xl" }))}
           >
             Découvrir nos Plats
           </Link>

@@ -38,10 +38,10 @@ export function HowItWorks() {
   ];
 
   return (
-    <section id="how-it-works" className="bg-white section-padding">
+    <section id="how-it-works" className="bg-background section-padding">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-text-dark">
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
             Comment Ça Fonctionne
           </h2>
         </div>
@@ -54,24 +54,22 @@ export function HowItWorks() {
                 key={step.id}
                 className="flex flex-col items-center text-center group"
               >
-                <div className="w-20 h-20 rounded-full bg-warm-white flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+                <div className="w-20 h-20 rounded-full bg-muted flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
                   <Icon
-                    className="w-10 h-10 text-secondary"
+                    className="w-10 h-10 text-muted-foreground"
                     strokeWidth={1.5}
                   />
                 </div>
 
-                <div className="mb-2 font-serif text-secondary text-xl font-bold">
+                <div className="mb-2 font-serif text-xl font-bold">
                   {step.id}.
                 </div>
 
-                <h3 className="font-sans font-semibold text-lg text-text-dark mb-3">
+                <h3 className="font-sans font-semibold text-lg mb-3">
                   {step.title}
                 </h3>
 
-                <p className="font-sans text-text-body leading-relaxed">
-                  {step.description}
-                </p>
+                <p className="font-sans leading-relaxed">{step.description}</p>
               </div>
             );
           })}

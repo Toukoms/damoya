@@ -18,7 +18,7 @@ export function NavLink(props: Props) {
     <Link
       {...linkProps}
       className={cn(
-        "text-secondary rounded-md font-mono px-3 py-2 hover:bg-primary/80 hover:text-white transition-colors duration-200",
+        "text-foreground rounded-md font-mono px-3 py-2 hover:bg-primary/80 hover:text-primary-foreground transition-colors duration-200",
         isActive && "font-bold",
         isScrolled !== undefined &&
           isScrolled === false &&

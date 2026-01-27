@@ -26,7 +26,7 @@ export function SearchInput({
     <form
       onSubmit={handleSubmit}
       className={cn(
-        "flex items-center h-10 gap-2 bg-background rounded-md border border-secondary/60 shadow-sm transition-all duration-200 hover:border-primary/60 focus-within:border-primary focus-within:shadow-md overflow-hidden",
+        "flex items-center h-10 gap-2 bg-background rounded-md border border-primary/60 shadow-sm transition-all duration-200 hover:border-secondary focus-within:border-primary focus-within:shadow-md overflow-hidden",
         containerClassName,
       )}
     >
@@ -35,7 +35,7 @@ export function SearchInput({
         name="search"
         placeholder="Recherche"
         className={cn(
-          "w-full px-4 py-2 bg-transparent outline-none placeholder-secondary",
+          "w-full px-4 py-2 bg-transparent outline-none placeholder-foreground/60",
           className,
         )}
         {...inputProps}

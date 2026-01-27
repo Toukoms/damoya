@@ -6,7 +6,7 @@ export default function ContactPage() {
   return (
     <MainWrapper>
       {/* Header Section */}
-      <section className="bg-secondary py-20 text-white text-center">
+      <section className="bg-primary py-20 text-primary-foreground text-center">
         <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
           Contactez-nous
         </h1>
@@ -16,14 +16,14 @@ export default function ContactPage() {
       </section>
 
       <div className="container-custom py-16 md:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 overflow-hidden bg-white rounded-2xl shadow-xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 overflow-hidden bg-card rounded-2xl shadow-xl">
           {/* Contact Info */}
           <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-text-dark mb-6">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
               Créons Ensemble Votre Événement
             </h2>
 
-            <p className="font-sans text-text-body text-lg mb-10 leading-relaxed">
+            <p className="font-sans text-muted-foreground text-lg mb-10 leading-relaxed">
               Parlez-nous de votre projet et recevez une proposition culinaire
               personnalisée. Que ce soit pour un mariage, une Bar Mitzvah ou un
               événement professionnel, nous sommes là pour vous accompagner.
@@ -31,28 +31,28 @@ export default function ContactPage() {
 
             <div className="space-y-8 mb-10">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-warm-white flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center shrink-0">
                   <LuPhone className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-sans font-bold text-text-dark mb-1">
+                  <h3 className="font-sans font-bold text-foreground mb-1">
                     Téléphone
                   </h3>
-                  <p className="font-sans text-text-body">01 86 95 92 92</p>
+                  <p className="font-sans text-muted-foreground">01 86 95 92 92</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-warm-white flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center shrink-0">
                   <LuMail className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-sans font-bold text-text-dark mb-1">
+                  <h3 className="font-sans font-bold text-foreground mb-1">
                     Email
                   </h3>
                   <a
                     href="mailto:info@damoyatraiteur.fr"
-                    className="font-sans text-text-body hover:text-primary transition-colors"
+                    className="font-sans text-muted-foreground hover:text-primary transition-colors"
                   >
                     info@damoyatraiteur.fr
                   </a>
@@ -60,14 +60,14 @@ export default function ContactPage() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-full bg-warm-white flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center shrink-0">
                   <LuMapPin className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-sans font-bold text-text-dark mb-1">
+                  <h3 className="font-sans font-bold text-foreground mb-1">
                     Adresse
                   </h3>
-                  <p className="font-sans text-text-body">
+                  <p className="font-sans text-muted-foreground">
                     123 Rue de la Gastronomie, 75000 Paris
                   </p>
                 </div>
@@ -76,14 +76,14 @@ export default function ContactPage() {
 
             <Link
               href="mailto:info@damoyatraiteur.fr"
-              className="inline-block bg-primary hover:bg-[#b89345] text-white text-center px-8 py-4 rounded font-sans font-bold transition-colors duration-300 w-full sm:w-auto"
+              className="inline-block bg-primary hover:bg-primary/90 text-primary-foreground text-center px-8 py-4 rounded font-sans font-bold transition-colors duration-300 w-full sm:w-auto"
             >
               Demander un devis
             </Link>
           </div>
 
           {/* Map Section */}
-          <div className="relative min-h-100 lg:min-h-full bg-gray-200">
+          <div className="relative min-h-100 lg:min-h-full bg-muted">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9916256937595!2d2.292292615509614!3d48.85837007928746!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1647526543210!5m2!1sfr!2sfr"
               width="100%"

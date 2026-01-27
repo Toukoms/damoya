@@ -48,8 +48,8 @@ function HeaderLogo({ isScrolled, isHomePage }: HeaderProps) {
   return (
     <Logo
       className={cn(
-        "w-30 md:w-36 lg:w-42",
-        isHomePage && !isScrolled && "hue-rotate-180 invert",
+        "w-30 md:w-36 lg:w-42 hue-rotate-180 invert",
+        isHomePage && !isScrolled && "invert-0 hue-rotate-0",
       )}
     />
   );
@@ -79,7 +79,12 @@ function MobileHeader({
             variant="ghost"
             size="icon"
             onClick={toggleMenu}
-            className="bg-background"
+            className={cn(
+              "transition-colors",
+              isHomePage && !isScrolled
+                ? "bg-transparent text-background hover:bg-background/20 hover:text-foreground"
+                : "bg-background text-foreground",
+            )}
           >
             <LuMenu className="w-6 h-6" />
           </Button>
@@ -95,18 +100,21 @@ function MobileHeader({
 
       {/* Mobile Drawer */}
       {isMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-black/50" onClick={toggleMenu}>
+        <div
+          className="fixed inset-0 z-50 bg-foreground/50"
+          onClick={toggleMenu}
+        >
           <div
             className="fixed top-0 left-0 bottom-0 w-[80%] max-w-sm bg-background shadow-xl p-6 flex flex-col gap-6"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="flex justify-between items-center">
-              <Logo className="w-24" />
+              <Logo className="w-24 invert hue-rotate-180" />
               <Button
                 variant="ghost"
                 size="icon"
                 onClick={toggleMenu}
-                className="rounded-full hover:bg-black/5"
+                className="rounded-full hover:bg-foreground/5"
               >
                 <LuX className="w-6 h-6" />
               </Button>

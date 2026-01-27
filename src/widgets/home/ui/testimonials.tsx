@@ -19,10 +19,10 @@ export function Testimonials() {
   ];
 
   return (
-    <section id="testimonials" className="bg-light-neutral section-padding">
+    <section id="testimonials" className="bg-muted section-padding">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-text-dark">
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">
             Ils Nous Ont Fait Confiance
           </h2>
         </div>
@@ -31,20 +31,20 @@ export function Testimonials() {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="bg-white p-8 md:p-10 rounded-lg shadow-sm relative"
+              className="bg-card p-8 md:p-10 rounded-lg shadow-sm relative"
             >
               <BiSolidQuoteAltLeft className="text-primary/20 text-6xl absolute top-6 left-6 z-0" />
 
               <div className="relative z-10">
-                <blockquote className="font-serif italic text-xl md:text-2xl text-text-dark mb-6 leading-relaxed">
+                <blockquote className="font-serif italic text-xl md:text-2xl text-foreground mb-6 leading-relaxed">
                   « {testimonial.quote} »
                 </blockquote>
 
-                <div className="border-t border-gray-100 pt-6">
-                  <p className="font-sans font-semibold text-text-dark text-lg">
+                <div className="border-t border-border pt-6">
+                  <p className="font-sans font-semibold text-foreground text-lg">
                     {testimonial.author}
                   </p>
-                  <p className="font-sans text-text-body text-sm uppercase tracking-wide">
+                  <p className="font-sans text-muted-foreground text-sm uppercase tracking-wide">
                     {testimonial.role}
                   </p>
                 </div>
