@@ -1,5 +1,7 @@
+import { Toaster } from "@/src/shared/ui";
 import "@app/styles/globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
+import { OrderProvider } from "@entities/order";
 import { Footer, Header } from "@widgets/root-layout";
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
@@ -30,9 +32,12 @@ export default function RootLayout({
         <body
           className={`${playfair.variable} ${inter.variable} antialiased flex flex-col min-h-screen bg-background text-foreground font-sans`}
         >
-          <Header className="px-2 md:px-4 lg:px-8" />
-          <main className="grow">{children}</main>
-          <Footer className="px-2 md:px-4 lg:px-8" />
+          <OrderProvider>
+            <Header className="px-2 md:px-4 lg:px-8" />
+            <main className="grow">{children}</main>
+            <Footer className="px-2 md:px-4 lg:px-8" />
+            <Toaster />
+          </OrderProvider>
         </body>
       </html>
     </ClerkProvider>

@@ -7,13 +7,14 @@ import {
   SignedOut,
   UserButton,
 } from "@clerk/nextjs";
+import { useOrder } from "@entities/order";
 import { cn } from "@shared/lib/tailwind";
 import { useMobile } from "@shared/lib/useMobile";
-import { Button, Logo, SearchInput } from "@shared/ui";
+import { Badge, Button, Logo, SearchInput } from "@shared/ui";
 import { NavLink } from "@shared/ui/nav-link";
 import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { ComponentProps, useEffect, useState } from "react";
+import { ComponentProps, Suspense, useEffect, useState } from "react";
 import { FiShoppingCart } from "react-icons/fi";
 import { LuMenu, LuX } from "react-icons/lu";
 
@@ -80,12 +81,21 @@ export function Header(props: ComponentProps<"header">) {
 }
 
 function CartButton() {
+  const { orders } = useOrder();
+  const totalItems = orders.reduce((acc, order) => acc + order.quantity, 0);
+
   return (
     <Link
       href={"/orders"}
-      className="bg-background p-2 rounded-sm cursor-pointer"
+      className="bg-background p-2 rounded-sm cursor-pointer relative"
     >
       <FiShoppingCart size={20} className="text-secondary" />
+      <Badge
+        variant="destructive"
+        className="absolute -top-1 -right-1 h-4 w-4 flex items-center justify-center p-0 text-[10px]"
+      >
+        {totalItems}
+      </Badge>
     </Link>
   );
 }
@@ -222,7 +232,9 @@ function DesktopHeader({
       </div>
 
       <div className="flex items-center gap-3">
-        <GlobalSearch />
+        <Suspense fallback={<SearchInput />}>
+          <GlobalSearch />
+        </Suspense>
         <CartButton />
         <SignedOut>
           <SignInButton>
