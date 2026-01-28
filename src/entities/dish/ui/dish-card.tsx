@@ -1,7 +1,7 @@
 import { cn } from "@/src/shared/lib/tailwind";
 
 import { AddToCartButton } from "@/src/features/cart/ui/add-to-cart-button";
-import { Card, CardContent } from "@/src/shared/ui";
+import { Card, CardContent, Price } from "@/src/shared/ui";
 import Image from "next/image";
 import Link from "next/link";
 import { ComponentProps } from "react";
@@ -28,8 +28,6 @@ export const DishCard = (props: Props) => {
     updatedAt,
     ...rest
   } = props;
-
-  const [intPrice, decimalPrice] = price.toFixed(2).split(".");
 
   return (
     <Card
@@ -75,17 +73,7 @@ export const DishCard = (props: Props) => {
           </span>
         </div>
 
-        <div className="mt-1 flex items-baseline">
-          <span className="text-xs align-top relative top-[0.1em] font-medium">
-            €
-          </span>
-          <span className="text-2xl font-medium leading-none text-foreground">
-            {intPrice}
-          </span>
-          <span className="text-xs align-top relative top-[0.1em] font-medium">
-            {decimalPrice}
-          </span>
-        </div>
+        <Price amount={price} variant="split" />
 
         <div className="text-xs text-muted-foreground mt-1">
           Livraison à 0,01€ pour votre première commande

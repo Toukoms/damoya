@@ -6,7 +6,9 @@ export * from "./label";
 export * from "./labeled-select";
 export * from "./logo";
 export * from "./main-wrapper";
+export * from "./price";
 export * from "./quantity-selector";
+
 export * from "./search-input";
 export * from "./select";
 export * from "./skeleton";

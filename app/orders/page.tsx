@@ -1,7 +1,7 @@
 "use client";
 
 import { OrderCard, useOrder } from "@/src/entities/order";
-import { Button, MainWrapper } from "@/src/shared/ui";
+import { Button, MainWrapper, Price } from "@/src/shared/ui";
 import { useClerk, useUser } from "@clerk/nextjs";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -42,20 +42,13 @@ export default function OrderPage() {
     router.push("/checkout");
   };
 
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat("fr-FR", {
-      style: "currency",
-      currency: "EUR",
-    }).format(price);
-  };
-
   return (
     <MainWrapper>
       <div className="bg-background min-h-screen py-8">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+          <div className="flex flex-col-reverse lg:flex-row gap-6">
             {/* Left Column - Cart Items */}
-            <div className="lg:col-span-3 bg-card p-6 shadow-sm rounded-sm">
+            <div className="lg:flex-3 bg-card p-6 shadow-sm rounded-sm">
               <h1 className="text-2xl font-medium mb-1 border-b pb-4">
                 Votre Panier
               </h1>
@@ -104,19 +97,23 @@ export default function OrderPage() {
 
                   <div className="text-right text-xl py-4 border-t">
                     Sous-total ({totalItems} articles):{" "}
-                    <span className="font-bold">{formatPrice(totalPrice)}</span>
+                    <span className="font-bold">
+                      <Price amount={totalPrice} />
+                    </span>
                   </div>
                 </>
               )}
             </div>
 
             {/* Right Column - Summary */}
-            <div className="lg:col-span-1">
+            <div className="lg:flex-1">
               {validOrders.length > 0 && (
-                <div className="bg-card p-4 shadow-sm rounded-sm sticky top-16 sm:top-24 lg:top-32">
+                <div className="bg-card p-4 shadow-sm rounded-sm sticky top-20 sm:top-28 lg:top-32">
                   <div className="text-lg mb-4">
                     Sous-total ({totalItems} articles):{" "}
-                    <span className="font-bold">{formatPrice(totalPrice)}</span>
+                    <span className="font-bold">
+                      <Price amount={totalPrice} />
+                    </span>
                   </div>
                   <Button
                     onClick={handleOrderSubmit}

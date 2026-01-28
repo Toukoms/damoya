@@ -2,8 +2,8 @@
 
 import { Dish } from "@/src/entities/dish/model/dish";
 import { useOrder } from "@/src/entities/order";
-import { cn, formatPrice } from "@/src/shared/lib";
-import { Badge, Button, QuantitySelector } from "@/src/shared/ui";
+import { cn } from "@/src/shared/lib";
+import { Badge, Button, Price, QuantitySelector } from "@/src/shared/ui";
 import { useState } from "react";
 import { FaCartPlus } from "react-icons/fa";
 import { toast } from "sonner";
@@ -71,7 +71,7 @@ export const AddToCartButton = ({
         {/* Show price if in detail mode (showQuantity=true) */}
         {showQuantity && (
           <span className="ml-auto italic">
-            {formatPrice(dish.price * quantity)}
+            <Price amount={dish.price * quantity} />
           </span>
         )}
 

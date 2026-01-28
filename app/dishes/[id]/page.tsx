@@ -1,6 +1,6 @@
 import { getDishById } from "@/src/entities/dish/api";
 import { AddToCartButton, BuyNowButton } from "@/src/features/cart";
-import { MainWrapper } from "@/src/shared/ui";
+import { MainWrapper, Price } from "@/src/shared/ui";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -19,8 +19,6 @@ export default async function DishDetailPage({ params }: PageProps) {
   if (!dish) {
     notFound();
   }
-
-  const [intPrice, decimalPrice] = dish.price.toFixed(2).split(".");
 
   return (
     <MainWrapper className="px-4 sm:px-8 min-h-screen">
@@ -66,26 +64,8 @@ export default async function DishDetailPage({ params }: PageProps) {
           </div>
 
           <div className="py-2">
-            <div className="flex items-baseline gap-2">
-              <span className="text-2xl font-light text-destructive">-5%</span>
-              <span className="flex items-baseline">
-                <span className="text-sm align-top relative top-[0.2em] font-medium">
-                  €
-                </span>
-                <span className="text-3xl font-medium leading-none text-foreground">
-                  {intPrice}
-                </span>
-                <span className="text-sm align-top relative top-[0.2em] font-medium">
-                  {decimalPrice}
-                </span>
-              </span>
-            </div>
-            <div className="text-sm text-muted-foreground mt-1">
-              Prix conseillé :{" "}
-              <span className="line-through">
-                {(dish.price * 1.05).toFixed(2)}€
-              </span>
-            </div>
+            <Price amount={dish.price} variant="split" />
+
             <div className="text-sm text-muted-foreground mt-1">
               Tous les prix incluent la TVA.
             </div>
@@ -121,17 +101,7 @@ export default async function DishDetailPage({ params }: PageProps) {
         {/* Buy Box - Right (3 cols) */}
         <div className="lg:col-span-3">
           <div className="border border-border rounded-lg p-4 space-y-4 shadow-sm bg-card">
-            <div className="flex items-baseline">
-              <span className="text-sm align-top relative top-[0.2em] font-medium">
-                €
-              </span>
-              <span className="text-2xl font-medium leading-none text-foreground">
-                {intPrice}
-              </span>
-              <span className="text-sm align-top relative top-[0.2em] font-medium">
-                {decimalPrice}
-              </span>
-            </div>
+            <Price amount={dish.price} variant="split" />
 
             <div className="text-sm text-muted-foreground">
               <span className="text-primary hover:underline cursor-pointer">

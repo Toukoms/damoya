@@ -1,5 +1,5 @@
 import { Dish } from "@/src/entities/dish/model/dish";
-import { QuantitySelector } from "@/src/shared/ui";
+import { Price, QuantitySelector } from "@/src/shared/ui";
 import Image from "next/image";
 import Link from "next/link";
 import { ComponentProps } from "react";
@@ -20,13 +20,6 @@ export function OrderCard({
   className,
   ...rest
 }: Props) {
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat("fr-FR", {
-      style: "currency",
-      currency: "EUR",
-    }).format(price);
-  };
-
   return (
     <div
       className={`py-6 flex flex-col sm:flex-row gap-4 ${className || ""}`}
@@ -66,7 +59,7 @@ export function OrderCard({
             </div>
           </div>
           <div className="text-lg font-bold text-foreground text-right sm:hidden">
-            {formatPrice(dish.price)}
+            <Price amount={dish.price} />
           </div>
         </div>
 
@@ -90,7 +83,7 @@ export function OrderCard({
 
       {/* Price Desktop */}
       <div className="text-lg font-bold text-foreground text-right hidden sm:block w-32">
-        {formatPrice(dish.price)}
+        <Price amount={dish.price} />
       </div>
     </div>
   );

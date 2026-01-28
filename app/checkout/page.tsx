@@ -6,7 +6,7 @@ import {
   PaymentMethodSelector,
   type NewCardData,
 } from "@/src/features/payment";
-import { MainWrapper } from "@/src/shared/ui";
+import { MainWrapper, Price } from "@/src/shared/ui";
 import { Button } from "@/src/shared/ui/button";
 import { Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
@@ -49,13 +49,6 @@ export default function CheckoutPage() {
     console.log("New card:", cardData);
   };
 
-  const formatPrice = (price: number) => {
-    return new Intl.NumberFormat("fr-FR", {
-      style: "currency",
-      currency: "EUR",
-    }).format(price);
-  };
-
   return (
     <MainWrapper className="px-4 sm:px-8 max-w-6xl mx-auto">
       <h1 className="text-3xl font-bold mb-8">Paiement</h1>
@@ -92,15 +85,15 @@ export default function CheckoutPage() {
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span>Articles ({totalItems}):</span>
-                <span>{formatPrice(totalPrice)}</span>
+                <Price amount={totalPrice} />
               </div>
               <div className="flex justify-between">
                 <span>Livraison:</span>
-                <span>0,00 €</span>
+                <Price amount={0} />
               </div>
               <div className="border-t pt-2 mt-2 font-bold flex justify-between text-lg">
                 <span>Total:</span>
-                <span>{formatPrice(totalPrice)}</span>
+                <Price amount={totalPrice} />
               </div>
             </div>
 
