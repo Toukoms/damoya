@@ -1,16 +1,10 @@
 import { AddToCartButton } from "@/src/features/cart/ui/add-to-cart-button";
-import { cn } from "@/src/shared/lib";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  Price,
-} from "@/src/shared/ui";
+import { CardContent, CardFooter, CardHeader, Price } from "@/src/shared/ui";
 import Image from "next/image";
 import Link from "next/link";
 import { ComponentProps } from "react";
 import { Dish } from "../model/dish";
+import { DishCardLayout } from "./dish-card-layout";
 
 type Props = Dish & ComponentProps<"div">;
 
@@ -34,45 +28,51 @@ export const DishCard = (props: Props) => {
   } = props;
 
   return (
-    <Card className={cn("pb-4 group overflow-hidden", className)} {...rest}>
-      <Link
-        href={`/dishes/${id}`}
-        className="relative aspect-video w-full bg-muted overflow-hidden"
-      >
-        <Image
-          src={imgUrl}
-          alt={title}
-          fill
-          className="object-cover group-hover:scale-105"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        />
-      </Link>
-
-      <CardHeader className="block">
-        <Link
-          href={`/dishes/${id}`}
-          className="hover:text-primary hover:underline decoration-primary"
-        >
-          <h3 className="line-clamp-2 text-lg font-medium text-foreground leading-snug">
-            {title}
-          </h3>
+    <DishCardLayout
+      className={className}
+      {...rest}
+      image={
+        <Link href={`/dishes/${id}`} className="block w-full h-full relative">
+          <Image
+            src={imgUrl}
+            alt={title}
+            fill
+            className="object-cover group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
         </Link>
-      </CardHeader>
+      }
+      info={
+        <>
+          <CardHeader className="block">
+            <Link
+              href={`/dishes/${id}`}
+              className="hover:text-primary hover:underline decoration-primary"
+            >
+              <h3 className="line-clamp-1 text-lg font-medium text-foreground leading-snug">
+                {title}
+              </h3>
+            </Link>
+          </CardHeader>
 
-      <CardContent className="space-y-2">
-        <p className="line-clamp-2 text-sm text-foreground/70">{description}</p>
+          <CardContent className="space-y-2">
+            <p className="line-clamp-2 text-sm text-foreground/70">
+              {description}
+            </p>
 
-        <Price amount={price} variant="split" className="text-accent" />
-      </CardContent>
+            <Price amount={price} variant="split" className="text-accent" />
+          </CardContent>
 
-      <CardFooter className="mt-auto">
-        <AddToCartButton
-          dish={props}
-          showQuantity={false}
-          buttonClassName="w-full bg-accent"
-          className="w-full"
-        />
-      </CardFooter>
-    </Card>
+          <CardFooter className="mt-auto">
+            <AddToCartButton
+              dish={props}
+              showQuantity={false}
+              buttonClassName="w-full bg-accent"
+              className="w-full"
+            />
+          </CardFooter>
+        </>
+      }
+    />
   );
 };

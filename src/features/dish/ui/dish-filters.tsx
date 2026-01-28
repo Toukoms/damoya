@@ -85,7 +85,10 @@ export const DishFilters = () => {
       </div>
 
       <div
-        className={cn("flex flex-col gap-4", !showFilters && "hidden md:flex")}
+        className={cn(
+          "flex flex-col lg:flex-row gap-4",
+          !showFilters && "hidden md:flex",
+        )}
       >
         {/* Sort Controls */}
         <div className="flex w-full gap-2 items-end md:w-fit">
