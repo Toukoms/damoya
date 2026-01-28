@@ -46,10 +46,7 @@ export const Price = ({
           {currencySymbol}
         </span>
         <span
-          className={cn(
-            "text-2xl font-medium leading-none text-foreground",
-            integerClassName,
-          )}
+          className={cn("text-2xl font-medium leading-none", integerClassName)}
         >
           {integerPart}
         </span>

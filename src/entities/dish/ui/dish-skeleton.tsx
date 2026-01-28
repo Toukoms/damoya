@@ -1,41 +1,36 @@
-import { Card, CardContent, Skeleton } from "@/src/shared/ui";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  Skeleton,
+} from "@/src/shared/ui";
 
 export const DishSkeleton = () => {
   return (
-    <Card className="flex flex-col overflow-hidden h-full border-none shadow-none rounded-none bg-card pb-2">
-      {/* Image Skeleton */}
-      <div className="relative flex items-center justify-center aspect-square w-full overflow-hidden bg-muted p-4">
-        <Skeleton className="h-full w-full" />
-      </div>
+    <Card className="py-4 group">
+      <CardHeader>
+        <div className="relative aspect-video w-full bg-muted overflow-hidden">
+          <Skeleton className="h-full w-full" />
+        </div>
+      </CardHeader>
 
-      {/* Content Skeleton */}
-      <CardContent className="p-4 flex flex-col flex-1 gap-1">
-        {/* Title */}
-        <div className="mb-1">
-          <Skeleton className="h-5 w-full" />
-          <Skeleton className="h-5 w-2/3 mt-1" />
+      <CardContent>
+        <div className="space-y-2">
+          <Skeleton className="h-6 w-full" />
+          <Skeleton className="h-6 w-2/3" />
         </div>
 
-        {/* Stars */}
-        <div className="flex items-center gap-1 mt-1">
-          <Skeleton className="h-4 w-24" />
+        <div className="my-2">
+          <Skeleton className="h-4 w-5/6" />
         </div>
 
-        {/* Price */}
-        <div className="mt-2 flex items-baseline gap-1">
-          <Skeleton className="h-7 w-20" />
-        </div>
-
-        {/* Delivery text */}
-        <div className="mt-1">
-          <Skeleton className="h-3 w-4/5" />
-        </div>
-
-        {/* Add to cart button */}
-        <div className="mt-auto pt-4">
-          <Skeleton className="h-8 w-full rounded-full" />
-        </div>
+        <Skeleton className="h-7 w-24" />
       </CardContent>
+
+      <CardFooter className="mt-auto">
+        <Skeleton className="h-9 w-full rounded-full" />
+      </CardFooter>
     </Card>
   );
 };

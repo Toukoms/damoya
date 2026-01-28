@@ -1,7 +1,12 @@
-import { cn } from "@/src/shared/lib/tailwind";
-
 import { AddToCartButton } from "@/src/features/cart/ui/add-to-cart-button";
-import { Card, CardContent, Price } from "@/src/shared/ui";
+import { cn } from "@/src/shared/lib";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  Price,
+} from "@/src/shared/ui";
 import Image from "next/image";
 import Link from "next/link";
 import { ComponentProps } from "react";
@@ -16,7 +21,6 @@ export const DishCard = (props: Props) => {
     price,
     imgUrl,
     className,
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     description,
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     standardQuantity,
@@ -30,64 +34,45 @@ export const DishCard = (props: Props) => {
   } = props;
 
   return (
-    <Card
-      className={cn(
-        "group relative flex flex-col overflow-hidden h-full border-none shadow-none hover:shadow-lg transition-shadow rounded-none bg-card pb-2",
-        className,
-      )}
-      {...rest}
-    >
+    <Card className={cn("pb-4 group overflow-hidden", className)} {...rest}>
       <Link
         href={`/dishes/${id}`}
-        className="relative flex items-center justify-center aspect-square w-full overflow-hidden bg-muted p-4"
+        className="relative aspect-video w-full bg-muted overflow-hidden"
       >
         <Image
           src={imgUrl}
           alt={title}
           fill
-          className="object-contain transition-transform duration-300 group-hover:scale-105"
+          className="object-cover group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </Link>
 
-      <CardContent className="p-4 flex flex-col flex-1 gap-1">
+      <CardHeader className="block">
         <Link
           href={`/dishes/${id}`}
           className="hover:text-primary hover:underline decoration-primary"
         >
-          <h3 className="line-clamp-3 text-base font-medium text-foreground leading-snug">
+          <h3 className="line-clamp-2 text-lg font-medium text-foreground leading-snug">
             {title}
           </h3>
         </Link>
+      </CardHeader>
 
-        <div className="flex items-center gap-1 text-sm text-primary">
-          <div className="flex text-accent">
-            <span>★</span>
-            <span>★</span>
-            <span>★</span>
-            <span>★</span>
-            <span>☆</span>
-          </div>
-          <span className="text-xs hover:underline cursor-pointer text-primary">
-            123
-          </span>
-        </div>
+      <CardContent className="space-y-2">
+        <p className="line-clamp-2 text-sm text-foreground/70">{description}</p>
 
-        <Price amount={price} variant="split" />
-
-        <div className="text-xs text-muted-foreground mt-1">
-          Livraison à 0,01€ pour votre première commande
-        </div>
-
-        <div className="mt-auto pt-4">
-          <AddToCartButton
-            dish={props}
-            showQuantity={false}
-            buttonClassName="w-full bg-accent hover:bg-accent/90 text-accent-foreground border border-accent rounded-full h-8 text-sm shadow-sm"
-            className="w-full"
-          />
-        </div>
+        <Price amount={price} variant="split" className="text-accent" />
       </CardContent>
+
+      <CardFooter className="mt-auto">
+        <AddToCartButton
+          dish={props}
+          showQuantity={false}
+          buttonClassName="w-full bg-accent"
+          className="w-full"
+        />
+      </CardFooter>
     </Card>
   );
 };
