@@ -1,6 +1,6 @@
 # Damoya Traiteur - Refonte
 
-Projet personnel de refonte du site web [https://www.damoyatraiteur.fr/](https://www.damoyatraiteur.fr/).
+Projet personnel de refonte du site web.
 
 Live Preview du refonte: [https://damoya.vercel.app/](https://damoya.vercel.app/)
 
