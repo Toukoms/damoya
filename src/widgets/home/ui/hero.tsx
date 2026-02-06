@@ -18,7 +18,7 @@ export function Hero() {
           className="object-cover brightness-75"
           priority
         />
-        <div className="absolute inset-0 bg-foreground/10" />
+        <div className="absolute inset-0 bg-foreground/50" />
         <div className="absolute bottom-0 left-0 right-0 h-50 bg-linear-to-t from-background to-transparent" />
       </div>
 
